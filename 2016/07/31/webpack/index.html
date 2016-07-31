@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Webpack 中文指南 | Director | It&#39;s going down,I&#39;m yelling timber,You better move,you better dance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="theme-color" content="#3F51B5">
+  
+  
+  <meta name="keywords" content="webpack,前端打包工具,模块化">
+  <meta name="description" content="Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。还可以将按需加载的模块进行代码分隔，等到实际需要的时候再异步加载。通过 loader 的转换，任何形式的资源都可以视作模块，比如 CommonJs 模块、 AMD 模块、 ES6 模块、CSS、图片、 JSON、Coffeescript、 LESS 等。
+主站 · 下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Webpack 中文指南">
+<meta property="og:url" content="https://leehave.github.io/2016/07/31/webpack/index.html">
+<meta property="og:site_name" content="Director">
+<meta property="og:description" content="Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。还可以将按需加载的模块进行代码分隔，等到实际需要的时候再异步加载。通过 loader 的转换，任何形式的资源都可以视作模块，比如 CommonJs 模块、 AMD 模块、 ES6 模块、CSS、图片、 JSON、Coffeescript、 LESS 等。
+主站 · 下">
+<meta property="og:image" content="https://badges.gitter.im/Join%20Chat.svg">
+<meta property="og:updated_time" content="2016-07-31T15:32:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Webpack 中文指南">
+<meta name="twitter:description" content="Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。还可以将按需加载的模块进行代码分隔，等到实际需要的时候再异步加载。通过 loader 的转换，任何形式的资源都可以视作模块，比如 CommonJs 模块、 AMD 模块、 ES6 模块、CSS、图片、 JSON、Coffeescript、 LESS 等。
+主站 · 下">
+<meta name="twitter:image" content="https://badges.gitter.im/Join%20Chat.svg">
+  
+    <link rel="alternative" href="/atom.xml" title="Director" type="application/atom+xml">
+  
+  <meta name="summary" content="&lt;p&gt;&lt;a href=&quot;https://gitter.im/zhaoda/webpack-handbook?utm_source=badge&amp;amp;utm_medium=badge&amp;amp;utm_campaign=pr-badge&amp;amp;utm_content=badge&quot;&gt;&lt;img src=&quot;https://badges.gitter.im/Join%20Chat.svg&quot; alt=&quot;Join the chat at https://gitter.im/zhaoda/webpack-handbook&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/webpack/webpack&quot;&gt;Webpack&lt;/a&gt; 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。还可以将按需加载的模块进行代码分隔，等到实际需要的时候再异步加载。通过 &lt;code&gt;loader&lt;/code&gt; 的转换，任何形式的资源都可以视作模块，比如 CommonJs 模块、 AMD 模块、 ES6 模块、CSS、图片、 JSON、Coffeescript、 LESS 等。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://zhaoda.net/webpack-handbook&quot;&gt;主站&lt;/a&gt; · &lt;a href=&quot;https://www.gitbook.com/book/zhaoda/webpack/details&quot;&gt;下载电子版&lt;/a&gt; · &lt;a href=&quot;http://webpackdoc.com&quot;&gt;国内镜像1&lt;/a&gt;（掘金）· &lt;a href=&quot;http://wiki.jikexueyuan.com/project/webpack-handbook&quot;&gt;国内镜像2&lt;/a&gt;（极客学院）&lt;/p&gt;">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner flex-row-vertical">
+  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="/" class="avatar"><img src="/img/logo.jpg"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">Director</h5>
+        <a href="mailto:undefined" title="1831553725@qq.com" class="mail">1831553725@qq.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <ul class="nav flex-col">
+    
+        <li class="waves-block waves-effect">
+          <a href="/"  >
+            <i class="icon icon-lg icon-home"></i>
+            主页
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="/archives"  >
+            <i class="icon icon-lg icon-archives"></i>
+            Archives
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="/tags"  >
+            <i class="icon icon-lg icon-tags"></i>
+            Tags
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="https://github.com/leehave" target="_blank" >
+            <i class="icon icon-lg icon-github"></i>
+            Github
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="http://weibo.com/u/2869337292" target="_blank" >
+            <i class="icon icon-lg icon-weibo"></i>
+            Weibo
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="/404"  >
+            <i class="icon icon-lg icon-link"></i>
+            测试
+          </a>
+        </li>
+    
+  </ul>
+
+  <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>Director &copy; 2016</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Webpack 中文指南</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">Webpack 中文指南</h1>
+    <h5 class="subtitle">
+        
+            <time datetime="2016-07-31T15:32:37.000Z" itemprop="datePublished" class="page-time">
+  2016-07-31
+</time>
+
+
+        
+    </h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      <article id="post-webpack" 
+  class="article article-type-post" itemprop="blogPost">
+    <div class="post-meat flex-row">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端打包工具/">前端打包工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模块化/">模块化</a></li></ul>
+
+    </div>
+    <div class="post-body">
+        <aside class="post-widget" id="post-widget">
+
+            
+            <div class="post-share" id="post-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+            
+
+            
+            <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#贡献内容"><span class="post-toc-text">贡献内容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#生成电子书"><span class="post-toc-text">生成电子书</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#更新日志"><span class="post-toc-text">更新日志</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#版权许可"><span class="post-toc-text">版权许可</span></a></li></ol>
+            </nav>
+            
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" id="post-content" itemprop="postContent">
+            <p><a href="https://gitter.im/zhaoda/webpack-handbook?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank" rel="external"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/zhaoda/webpack-handbook"></a></p>
+<p><a href="https://github.com/webpack/webpack" target="_blank" rel="external">Webpack</a> 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。还可以将按需加载的模块进行代码分隔，等到实际需要的时候再异步加载。通过 <code>loader</code> 的转换，任何形式的资源都可以视作模块，比如 CommonJs 模块、 AMD 模块、 ES6 模块、CSS、图片、 JSON、Coffeescript、 LESS 等。</p>
+<p><a href="http://zhaoda.net/webpack-handbook" target="_blank" rel="external">主站</a> · <a href="https://www.gitbook.com/book/zhaoda/webpack/details" target="_blank" rel="external">下载电子版</a> · <a href="http://webpackdoc.com" target="_blank" rel="external">国内镜像1</a>（掘金）· <a href="http://wiki.jikexueyuan.com/project/webpack-handbook" target="_blank" rel="external">国内镜像2</a>（极客学院）</p>
+<a id="more"></a>
+<h2 id="贡献内容"><a href="#贡献内容" class="headerlink" title="贡献内容"></a>贡献内容</h2><p>如果你想参与这本书的共同创作，修改或添加内容，可以先 <a href="https://github.com/zhaoda/webpack-handbook" target="_blank" rel="external">Fork</a> 这本书的仓库，然后将修改的内容提交 <a href="https://github.com/zhaoda/webpack-handbook/pulls" target="_blank" rel="external">Pull requests</a> ；或者创建 <a href="https://github.com/zhaoda/webpack-handbook/issues" target="_blank" rel="external">Issues</a>。</p>
+<p>Fork 后的仓库如何同步本仓库？</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">// 添加 upstream 源，只需执行一次</div><div class="line">$ git remote add upstream git@github.com:zhaoda/webpack-handbook.git</div><div class="line"></div><div class="line">// 拉取远程代码</div><div class="line">$ git pull upstream master</div><div class="line"></div><div class="line">// 提交修改</div><div class="line">$ git add .</div><div class="line">$ git commit</div><div class="line"></div><div class="line">// 更新 fork 仓库</div><div class="line">$ git push origin master</div></pre></td></tr></table></figure>
+<p>更多参考： <a href="https://help.github.com/articles/syncing-a-fork/" target="_blank" rel="external">Syncing a fork</a></p>
+<p>注意，本书内容在 <code>/content</code> 目录中， <a href="https://github.com/zhaoda/webpack-handbook/tree/gh-pages" target="_blank" rel="external">gh-pages</a> 分支和 <a href="https://github.com/zhaoda/webpack-handbook/wiki" target="_blank" rel="external">Wiki</a> 版是通过脚本自动生成的。</p>
+<h2 id="生成电子书"><a href="#生成电子书" class="headerlink" title="生成电子书"></a>生成电子书</h2><p>这本书使用 <a href="https://github.com/GitbookIO/gitbook" target="_blank" rel="external">Gitbook</a> 撰写并生成<a href="http://zhaoda.net/webpack-handbook/" target="_blank" rel="external">网站</a>，请查看 <code>package.json</code> 中的 <code>scripts</code> 配置和 <code>/scripts</code> 目录中的脚本来了解这本书的构建和发布过程。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">// 初始化 nodejs 依赖</div><div class="line">$ npm install</div><div class="line"></div><div class="line">// 安装 gitbook 插件</div><div class="line">$ npm install gitbook-cli -g</div><div class="line">$ gitbook install ./content</div><div class="line"></div><div class="line">// 启动 gitbook 服务开始撰写工作</div><div class="line">$ npm run serve-gitbook</div><div class="line"></div><div class="line">// 生成 gitbook</div><div class="line">$ npm run generate-gitbook</div><div class="line"></div><div class="line">// 生成 wiki</div><div class="line">$ npm run generate-wiki</div><div class="line"></div><div class="line">// 发布到 gh-pages 分支</div><div class="line">$ npm run deploy-gitbook</div><div class="line"></div><div class="line">// 发布到 wiki</div><div class="line">$ npm run deploy-wiki</div><div class="line"></div><div class="line">// 生成并发布，是上面4条命令的快捷方式，通常编辑内容后只需要进行这个操作</div><div class="line">$ npm run generate-and-deploy</div></pre></td></tr></table></figure>
+<h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><p><a href="https://github.com/zhaoda/webpack-handbook/commits/master" target="_blank" rel="external">https://github.com/zhaoda/webpack-handbook/commits/master</a></p>
+<h2 id="版权许可"><a href="#版权许可" class="headerlink" title="版权许可"></a>版权许可</h2><p><br>  <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Webpack 中文指南</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="http://zhaoda.net/webpack-handbook" property="cc:attributionName" rel="external" target="_blank">赵达</a> 创作，采用 <a rel="external" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享 署名-非商业性使用 4.0 国际 许可协议</a>进行许可。<br></p>
+            <blockquote>
+                <p>
+                本文地址：
+                <a href="https://leehave.github.io/2016/07/31/webpack/" target="_blank" rel="external">https://leehave.github.io/2016/07/31/webpack/</a>
+                </p>
+                <footer><cite><a href="https://leehave.github.io">@Director</a></cite></footer>
+            </blockquote>
+            </div>
+            
+<nav class="post-nav">
+  
+    <div class="waves-block waves-effect prev fl">
+      <a href="/2016/08/01/something/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">导演很无语</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next fr">
+      <a href="/2016/07/31/hello-world/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Hello World</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+            
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="webpack" data-title="Webpack 中文指南" data-url="https://leehave.github.io/2016/07/31/webpack/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"disqus_shortname"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+        </div>
+    </div>
+</article>
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<script>
+var BLOG_SHARE = {
+    title: "Webpack 中文指南",
+    pic: "/img/logo.jpg",
+    summary: document.getElementsByName('summary')[0].content,
+    url: "https://leehave.github.io/2016/07/31/webpack/index.html"
+};
+</script>
+<div class="global-share" id="global-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<script type="text/template" id="search-tpl">
+<li class="item">
+    <a href="/{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</script>
+
+<script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
