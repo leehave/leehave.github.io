@@ -4,9 +4,9 @@
   <subtitle>It&#39;s going down,I&#39;m yelling timber,You better move,you better dance</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://leehave.github.io/"/>
+  <link href="https://lzxhave.github.io/"/>
   <updated>2016-08-02T09:24:17.000Z</updated>
-  <id>https://leehave.github.io/</id>
+  <id>https://lzxhave.github.io/</id>
   
   <author>
     <name>Director</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>es6中文手册</title>
-    <link href="https://leehave.github.io/2016/08/02/es6%E6%89%8B%E5%86%8C/"/>
-    <id>https://leehave.github.io/2016/08/02/es6手册/</id>
+    <link href="https://lzxhave.github.io/2016/08/02/es6%E6%89%8B%E5%86%8C/"/>
+    <id>https://lzxhave.github.io/2016/08/02/es6手册/</id>
     <published>2016-08-02T09:24:17.000Z</published>
     <updated>2016-08-02T09:24:17.000Z</updated>
     
@@ -282,14 +282,14 @@
     </summary>
     
     
-      <category term="ECMAscript" scheme="https://leehave.github.io/tags/ECMAscript/"/>
+      <category term="ECMAscript" scheme="https://lzxhave.github.io/tags/ECMAscript/"/>
     
   </entry>
   
   <entry>
     <title>导演很无语</title>
-    <link href="https://leehave.github.io/2016/08/01/something/"/>
-    <id>https://leehave.github.io/2016/08/01/something/</id>
+    <link href="https://lzxhave.github.io/2016/08/01/something/"/>
+    <id>https://lzxhave.github.io/2016/08/01/something/</id>
     <published>2016-07-31T16:03:29.000Z</published>
     <updated>2016-07-31T16:03:29.000Z</updated>
     
@@ -333,8 +333,8 @@
   
   <entry>
     <title>Webpack 中文指南</title>
-    <link href="https://leehave.github.io/2016/07/31/webpack/"/>
-    <id>https://leehave.github.io/2016/07/31/webpack/</id>
+    <link href="https://lzxhave.github.io/2016/07/31/webpack/"/>
+    <id>https://lzxhave.github.io/2016/07/31/webpack/</id>
     <published>2016-07-31T15:32:37.000Z</published>
     <updated>2016-07-31T15:32:37.000Z</updated>
     
@@ -361,18 +361,18 @@
     </summary>
     
     
-      <category term="webpack" scheme="https://leehave.github.io/tags/webpack/"/>
+      <category term="webpack" scheme="https://lzxhave.github.io/tags/webpack/"/>
     
-      <category term="前端打包工具" scheme="https://leehave.github.io/tags/%E5%89%8D%E7%AB%AF%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/"/>
+      <category term="前端打包工具" scheme="https://lzxhave.github.io/tags/%E5%89%8D%E7%AB%AF%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/"/>
     
-      <category term="模块化" scheme="https://leehave.github.io/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+      <category term="模块化" scheme="https://lzxhave.github.io/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://leehave.github.io/2016/07/31/hello-world/"/>
-    <id>https://leehave.github.io/2016/07/31/hello-world/</id>
+    <link href="https://lzxhave.github.io/2016/07/31/hello-world/"/>
+    <id>https://lzxhave.github.io/2016/07/31/hello-world/</id>
     <published>2016-07-31T15:15:43.000Z</published>
     <updated>2016-07-31T15:15:43.000Z</updated>
     
