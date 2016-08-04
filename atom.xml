@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://leehave.github.io/"/>
-  <updated>2016-08-04T05:49:02.000Z</updated>
+  <updated>2016-08-04T05:53:50.000Z</updated>
   <id>https://leehave.github.io/</id>
   
   <author>
@@ -19,16 +19,18 @@
     <title>前端开发面试题之JavaScript</title>
     <link href="https://leehave.github.io/2016/08/04/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E9%9D%A2%E8%AF%95%E9%A2%98%E4%B9%8BJavaScript/"/>
     <id>https://leehave.github.io/2016/08/04/前端开发面试题之JavaScript/</id>
-    <published>2016-08-04T05:49:02.000Z</published>
-    <updated>2016-08-04T05:49:02.000Z</updated>
+    <published>2016-08-04T05:53:50.000Z</published>
+    <updated>2016-08-04T05:53:50.000Z</updated>
     
-    <content type="html"><![CDATA[<p><em>*</em> 原作者晓松 <a href="http://www.jianshu.com/p/05d84b60a1dc" target="_blank" rel="external">地址</a></p>
+    <content type="html"><![CDATA[<hr>
+<p> 原作者晓松链接 <a href="http://www.jianshu.com/p/05d84b60a1dc" target="_blank" rel="external">http://www.jianshu.com/p/05d84b60a1dc</a></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1714316-71dd9f7c05c24792.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <blockquote>
 <p>“每18至24个月，前端都会难一倍”</p>
 <p>——赫门 “2015深JS大会《前端服务化之路》主题演讲”</p>
 </blockquote>
 <h4 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h4><p><code>数据类型</code>、<code>运算</code>、<code>对象</code>、<code>function</code>、<code>继承</code>、<code>闭包</code>、<code>作用域</code>、<code>原型链</code>、<code>事件</code>、<code>RegExp</code>、<code>JSON</code>、<code>Ajax</code>、<code>DOM</code>、<code>BOM</code>、<code>内存泄漏</code>、<code>跨域</code>、<code>异步加载</code>、<code>模板引擎</code>、<code>前端MVC</code>、<code>前端MVVM</code>、<code>路由</code>、<code>模块化</code>、<code>Canvas</code>、<code>jQuery</code>、<code>ECMAScript 2015（ES6）</code>、<code>Node.js</code>、<code>AngularJS</code>、<code>React</code>、<code>CommonJS</code>、<code>AMD</code>、<code>CMD</code> ……</p>
+<a id="more"></a>
 <h4 id="题目-amp-答案"><a href="#题目-amp-答案" class="headerlink" title="题目&amp;答案"></a>题目&amp;答案</h4><ul>
 <li><p>介绍一下 JS 的基本数据类型。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Undefined、Null、Boolean、Number、String</div></pre></td></tr></table></figure>
@@ -190,8 +192,14 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;em&gt;*&lt;/em&gt; 原作者晓松 &lt;a href=&quot;http://www.jianshu.com/p/05d84b60a1dc&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://upload-ima
+      &lt;hr&gt;
+&lt;p&gt; 原作者晓松链接 &lt;a href=&quot;http://www.jianshu.com/p/05d84b60a1dc&quot;&gt;http://www.jianshu.com/p/05d84b60a1dc&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1714316-71dd9f7c05c24792.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“每18至24个月，前端都会难一倍”&lt;/p&gt;
+&lt;p&gt;——赫门 “2015深JS大会《前端服务化之路》主题演讲”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;知识点&quot;&gt;&lt;a href=&quot;#知识点&quot; class=&quot;headerlink&quot; title=&quot;知识点&quot;&gt;&lt;/a&gt;知识点&lt;/h4&gt;&lt;p&gt;&lt;code&gt;数据类型&lt;/code&gt;、&lt;code&gt;运算&lt;/code&gt;、&lt;code&gt;对象&lt;/code&gt;、&lt;code&gt;function&lt;/code&gt;、&lt;code&gt;继承&lt;/code&gt;、&lt;code&gt;闭包&lt;/code&gt;、&lt;code&gt;作用域&lt;/code&gt;、&lt;code&gt;原型链&lt;/code&gt;、&lt;code&gt;事件&lt;/code&gt;、&lt;code&gt;RegExp&lt;/code&gt;、&lt;code&gt;JSON&lt;/code&gt;、&lt;code&gt;Ajax&lt;/code&gt;、&lt;code&gt;DOM&lt;/code&gt;、&lt;code&gt;BOM&lt;/code&gt;、&lt;code&gt;内存泄漏&lt;/code&gt;、&lt;code&gt;跨域&lt;/code&gt;、&lt;code&gt;异步加载&lt;/code&gt;、&lt;code&gt;模板引擎&lt;/code&gt;、&lt;code&gt;前端MVC&lt;/code&gt;、&lt;code&gt;前端MVVM&lt;/code&gt;、&lt;code&gt;路由&lt;/code&gt;、&lt;code&gt;模块化&lt;/code&gt;、&lt;code&gt;Canvas&lt;/code&gt;、&lt;code&gt;jQuery&lt;/code&gt;、&lt;code&gt;ECMAScript 2015（ES6）&lt;/code&gt;、&lt;code&gt;Node.js&lt;/code&gt;、&lt;code&gt;AngularJS&lt;/code&gt;、&lt;code&gt;React&lt;/code&gt;、&lt;code&gt;CommonJS&lt;/code&gt;、&lt;code&gt;AMD&lt;/code&gt;、&lt;code&gt;CMD&lt;/code&gt; ……&lt;/p&gt;
     
     </summary>
     
