@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://leehave.github.io/"/>
-  <updated>2016-09-05T06:24:25.000Z</updated>
+  <updated>2016-09-05T06:31:01.000Z</updated>
   <id>https://leehave.github.io/</id>
   
   <author>
@@ -16,13 +16,16 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>vue开发环境设置</title>
     <link href="https://leehave.github.io/2016/09/05/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E8%AE%BE%E7%BD%AE/"/>
     <id>https://leehave.github.io/2016/09/05/开发环境设置/</id>
-    <published>2016-09-05T06:24:25.000Z</published>
-    <updated>2016-09-05T06:24:25.000Z</updated>
+    <published>2016-09-05T06:31:01.000Z</published>
+    <updated>2016-09-05T06:31:01.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="vue开发环境设置"><a href="#vue开发环境设置" class="headerlink" title="vue开发环境设置"></a>vue开发环境设置</h1><ul>
+    <content type="html"><![CDATA[<blockquote>
+<p>Vue.js 不支持 IE8 及其以下版本，因为 Vue.js 使用了 IE8 不能实现的 ECMAScript 5 特性。 Vue.js 支持所有兼容 ECMAScript 5 的浏览器。</p>
+</blockquote>
+<ul>
 <li><p>编辑工具：atom，64位。</p>
 <ul>
 <li>安装过程<ol>
@@ -36,7 +39,7 @@
 <li>language-vue: vue组件开发语法加亮</li>
 <li>linter: 语法检查插件</li>
 <li>linter-eslint：对js文件、vue组件进行语法检查的插件</li>
-<li>snippets.cson文件：内置了一些vue组件的代码片段</li>
+<li>snippets.cson文件：内置了一些vue组件的代码片段<a id="more"></a></li>
 </ul>
 </li>
 </ol>
@@ -150,13 +153,31 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;vue开发环境设置&quot;&gt;&lt;a href=&quot;#vue开发环境设置&quot; class=&quot;headerlink&quot; title=&quot;vue开发环境设置&quot;&gt;&lt;/a&gt;vue开发环境设置&lt;/h1&gt;&lt;ul&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;Vue.js 不支持 IE8 及其以下版本，因为 Vue.js 使用了 IE8 不能实现的 ECMAScript 5 特性。 Vue.js 支持所有兼容 ECMAScript 5 的浏览器。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;编辑工具：atom，64位。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;安装过程&lt;
+&lt;li&gt;安装过程&lt;ol&gt;
+&lt;li&gt;解压 atom.zip 文件夹到自己的工具盘下。&lt;/li&gt;
+&lt;li&gt;修改atom快捷方式中的路径为自己工具盘的路径。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;配置过程&lt;ol&gt;
+&lt;li&gt;解压.atom.rar 到自己机器的当前用户的根目录下。这个文件夹是atom的使用配置文件，包括：&lt;ul&gt;
+&lt;li&gt;git-plus插件：git插件&lt;/li&gt;
+&lt;li&gt;language-vue: vue组件开发语法加亮&lt;/li&gt;
+&lt;li&gt;linter: 语法检查插件&lt;/li&gt;
+&lt;li&gt;linter-eslint：对js文件、vue组件进行语法检查的插件&lt;/li&gt;
+&lt;li&gt;snippets.cson文件：内置了一些vue组件的代码片段
     
     </summary>
     
+    
+      <category term="MVVM" scheme="https://leehave.github.io/tags/MVVM/"/>
+    
+      <category term="vuejs" scheme="https://leehave.github.io/tags/vuejs/"/>
     
   </entry>
   
