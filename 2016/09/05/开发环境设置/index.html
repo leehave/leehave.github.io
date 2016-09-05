@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>No title | Director | It&#39;s going down,I&#39;m yelling timber,You better move,you better dance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="theme-color" content="#3F51B5">
+  
+  
+  <meta name="keywords" content="">
+  <meta name="description" content="vue开发环境设置
+编辑工具：atom，64位。
+
+安装过程
+解压 atom.zip 文件夹到自己的工具盘下。
+修改atom快捷方式中的路径为自己工具盘的路径。
+
+
+配置过程
+解压.atom.rar 到自己机器的当前用户的根目录下。这个文件夹是atom的使用配置文件，包括：
+git-plus插件：git插件
+language-vue: vue组件开发语法加亮
+linter: 语法检查插件
+lint">
+<meta property="og:type" content="article">
+<meta property="og:title" content="No title">
+<meta property="og:url" content="https://leehave.github.io/2016/09/05/开发环境设置/index.html">
+<meta property="og:site_name" content="Director">
+<meta property="og:description" content="vue开发环境设置
+编辑工具：atom，64位。
+
+安装过程
+解压 atom.zip 文件夹到自己的工具盘下。
+修改atom快捷方式中的路径为自己工具盘的路径。
+
+
+配置过程
+解压.atom.rar 到自己机器的当前用户的根目录下。这个文件夹是atom的使用配置文件，包括：
+git-plus插件：git插件
+language-vue: vue组件开发语法加亮
+linter: 语法检查插件
+lint">
+<meta property="og:updated_time" content="2016-09-05T06:24:25.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="No title">
+<meta name="twitter:description" content="vue开发环境设置
+编辑工具：atom，64位。
+
+安装过程
+解压 atom.zip 文件夹到自己的工具盘下。
+修改atom快捷方式中的路径为自己工具盘的路径。
+
+
+配置过程
+解压.atom.rar 到自己机器的当前用户的根目录下。这个文件夹是atom的使用配置文件，包括：
+git-plus插件：git插件
+language-vue: vue组件开发语法加亮
+linter: 语法检查插件
+lint">
+  
+    <link rel="alternative" href="/atom.xml" title="Director" type="application/atom+xml">
+  
+  <meta name="summary" content="Director">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner flex-row-vertical">
+  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="/" class="avatar"><img src="/img/logo.jpg"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">Director</h5>
+        <a href="mailto:undefined" title="1831553725@qq.com" class="mail">1831553725@qq.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <ul class="nav flex-col">
+    
+        <li class="waves-block waves-effect">
+          <a href="/"  >
+            <i class="icon icon-lg icon-home"></i>
+            主页
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="/archives"  >
+            <i class="icon icon-lg icon-archives"></i>
+            Archives
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="/tags"  >
+            <i class="icon icon-lg icon-tags"></i>
+            Tags
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="https://github.com/leehave" target="_blank" >
+            <i class="icon icon-lg icon-github"></i>
+            Github
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="http://weibo.com/u/2869337292" target="_blank" >
+            <i class="icon icon-lg icon-weibo"></i>
+            Weibo
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="/404"  >
+            <i class="icon icon-lg icon-link"></i>
+            测试
+          </a>
+        </li>
+    
+  </ul>
+
+  <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>Director &copy; 2016</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">No title</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">No title</h1>
+    <h5 class="subtitle">
+        
+            <time datetime="2016-09-05T06:24:25.000Z" itemprop="datePublished" class="page-time">
+  2016-09-05
+</time>
+
+
+        
+    </h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      <article id="post-开发环境设置" 
+  class="article article-type-post" itemprop="blogPost">
+    <div class="post-meat flex-row">
+        
+    </div>
+    <div class="post-body">
+        <aside class="post-widget" id="post-widget">
+
+            
+            <div class="post-share" id="post-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+            
+
+            
+            <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#vue开发环境设置"><span class="post-toc-text">vue开发环境设置</span></a></li></ol>
+            </nav>
+            
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="vue开发环境设置"><a href="#vue开发环境设置" class="headerlink" title="vue开发环境设置"></a>vue开发环境设置</h1><ul>
+<li><p>编辑工具：atom，64位。</p>
+<ul>
+<li>安装过程<ol>
+<li>解压 atom.zip 文件夹到自己的工具盘下。</li>
+<li>修改atom快捷方式中的路径为自己工具盘的路径。</li>
+</ol>
+</li>
+<li>配置过程<ol>
+<li>解压.atom.rar 到自己机器的当前用户的根目录下。这个文件夹是atom的使用配置文件，包括：<ul>
+<li>git-plus插件：git插件</li>
+<li>language-vue: vue组件开发语法加亮</li>
+<li>linter: 语法检查插件</li>
+<li>linter-eslint：对js文件、vue组件进行语法检查的插件</li>
+<li>snippets.cson文件：内置了一些vue组件的代码片段</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>使用方式<ul>
+<li>atom 主要使用快捷键，文档参考：<ul>
+<li><a href="http://ju.outofmemory.cn/entry/187281" target="_blank" rel="external">atom快捷键</a></li>
+<li><a href="http://flight-manual.atom.io/using-atom/" target="_blank" rel="external">官方使用手册</a></li>
+</ul>
+</li>
+<li>文档编写使用markdown，文档参考：<ul>
+<li><a href="http://blog.chinaunix.net/uid-7374279-id-5114730.html" target="_blank" rel="external">markdown语言详解</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>开发工具：nodejs，64位</p>
+<ul>
+<li>安装过程<ol>
+<li>解压 nodejs.rar 文件夹到自己的工具盘下。</li>
+<li>设置系统环境变量Path，把nodejs安装的根目录添加进去。</li>
+<li>命令行下运行npm, 可以看到使用帮助，证明成功。</li>
+</ol>
+</li>
+<li>配置过程<ol>
+<li>解压 npm.rar 到自己机器当前用户的AppData\Roaming文件夹下。AppData文件夹是系统隐藏文件夹，如找不到，设置显示隐藏文件夹即可。npm文件夹中有全局模块，可以在所有项目里共享。</li>
+</ol>
+</li>
+<li>使用发生<ul>
+<li>npm 要在命令行下运行，文档参考：<ul>
+<li><a href="https://docs.npmjs.com/getting-started/what-is-npm" target="_blank" rel="external">npm使用</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Git工具</p>
+<ul>
+<li>安装过程<ol>
+<li>解压 git.rar 文件夹到自己的工具盘下。</li>
+<li>设置系统环境变量Path，内容为 <code>安装路径/git/cmd</code></li>
+<li>命令行下运行git, 可以看到使用帮助，证明成功。</li>
+</ol>
+</li>
+<li>配置过程<ol>
+<li>复制.gitconfig文件到$HOME下。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>chrome安装</p>
+<ul>
+<li>安装过程<ol>
+<li>解压chrome.rar到自己的工具盘下。</li>
+<li>运行Chrome\Application\chrome.exe</li>
+<li>解压vue-devtools.rar到自己的工具盘下</li>
+<li>在chrome的 <code>更多工具\扩展程序</code> 里，选择 <code>开发模式</code>，点击 <code>已解压的扩展程序</code>，选择vue-devtools解压处理的文件夹即可。安装的是vue的chrome扩展工具。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>vue-client工程，前台vue组件的基础工程</p>
+<ul>
+<li><p>安装过程</p>
+<ol>
+<li><p>在github上下载最新版本到自己的工作区间。命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/DuBin1988/vue-client</div></pre></td></tr></table></figure>
+</li>
+<li><p>在atom里 File/Add Project Folder 菜单中加入vue-client工程</p>
+</li>
+<li>解压vue-client\node_modules.rar 到vue-client目录下，这个文件是vue-client的本地模块文件夹</li>
+</ol>
+</li>
+<li>测试<ol>
+<li>修改examples下所有文件名首字母为大写</li>
+<li>在命令行下，进入vue-client目录</li>
+<li>运行 <code>npm run dev</code> 启动测试</li>
+<li>在chrome里执行 <a href="http://localhost:8080/Busy.html" target="_blank" rel="external">http://localhost:8080/Busy.html</a> 测试busy组件是否正常运行。</li>
+<li>按 <code>F12</code> 打开chrome的开发者环境，可以看到vue-Devtools，用这个工具，可以看到组件树。</li>
+</ol>
+</li>
+<li>自己动手<ol>
+<li>复制examples下的Busy文件夹，改名为Test</li>
+<li>修改index.html <code>&lt;script src=&quot;../BusyApp.js&quot;&gt;&lt;/script&gt;</code>中 BusyApp 为 TestApp</li>
+<li>main.js保持不动。</li>
+<li>App.vue是自己要做的组件，修改组件模板部分为自己想要的内容。重启 <code>npm run dev</code>，访问 <a href="http://localhost:8080/Test.html，即可看到自己所做的组件。" target="_blank" rel="external">http://localhost:8080/Test.html，即可看到自己所做的组件。</a></li>
+</ol>
+</li>
+<li>更多内容<ul>
+<li>组件制作请参考：<a href="http://cn.vuejs.org/" target="_blank" rel="external">http://cn.vuejs.org/</a></li>
+<li>JS6请参考：<a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">http://es6.ruanyifeng.com/</a></li>
+<li>BootStrap请参考：<a href="http://v3.bootcss.com/" target="_blank" rel="external">http://v3.bootcss.com/</a></li>
+</ul>
+</li>
+<li>工作规范<br>一般情况下，遵循如下工作规范：<ul>
+<li>在docs里对要开发的组件，进行设计及说明，格式可以参考Busy.md等文件。</li>
+<li>开发的组件，放在src/components下。</li>
+<li>在examples下建立文件夹，对开发的组件进行测试。</li>
+<li>提交前，对docs及组件源码进行检查，确定是否最终内容。</li>
+<li>在进行新版本发布时，修改CHANGELOG.md，CHANGELOG.md书写规范，参考：<a href="http://keepachangelog.com/zh-CN/" target="_blank" rel="external">http://keepachangelog.com/zh-CN/</a></li>
+<li>vue-client下的README.md是vue-client的整体描述。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            <blockquote>
+                <p>
+                本文地址：
+                <a href="https://leehave.github.io/2016/09/05/开发环境设置/" target="_blank" rel="external">https://leehave.github.io/2016/09/05/开发环境设置/</a>
+                </p>
+                <footer><cite><a href="https://leehave.github.io">@Director</a></cite></footer>
+            </blockquote>
+            </div>
+            
+<nav class="post-nav">
+  
+
+  
+    <div class="waves-block waves-effect next fr">
+      <a href="/2016/08/04/前端开发面试题之JavaScript/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">前端开发面试题之JavaScript</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+            
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="开发环境设置" data-title="No title" data-url="https://leehave.github.io/2016/09/05/开发环境设置/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"disqus_shortname"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+        </div>
+    </div>
+</article>
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<script>
+var BLOG_SHARE = {
+    title: "No title",
+    pic: "/img/logo.jpg",
+    summary: document.getElementsByName('summary')[0].content,
+    url: "https://leehave.github.io/2016/09/05/开发环境设置/index.html"
+};
+</script>
+<div class="global-share" id="global-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<script type="text/template" id="search-tpl">
+<li class="item">
+    <a href="/{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</script>
+
+<script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
