@@ -141,6 +141,56 @@
       <ul class="post-list">
   
     <li class="post-list-item">
+        <article id="post-vue构建项目结构解析" 
+  class="article article-type-post" itemprop="blogPost">
+     
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/09/05/vue构建项目结构解析/">vuejs结构分析</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time datetime="2016-09-05T14:16:17.000Z" itemprop="datePublished" class="post-time">
+  2016-09-05
+</time>
+
+        
+
+ 
+    </div>
+    
+    <div class="post-content" id="post-content" itemprop="postContent" >
+    
+        <blockquote>
+<p>Vue.js是一个构建数据驱动的 web 界面的库。Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。</p>
+</blockquote>
+<ul>
+<li>下面我们来看下vue的VM层结构</li>
+</ul>
+<h4 id="文档结构如下"><a href="#文档结构如下" class="headerlink" title="文档结构如下"></a>文档结构如下</h4><p><img src="http://i4.buimg.com/567571/a11e399a7451f85a.png" alt=""></p>
+<p>APP是单页起始的父组件模板 其余子组件全部在 <code>conponents</code>文件夹中</p>
+<h4 id="文档引入如下"><a href="#文档引入如下" class="headerlink" title="文档引入如下"></a>文档引入如下</h4><p><img src="http://i4.buimg.com/567571/1865865c33f568f1.png" alt=""></p>
+<h4 id="我们再看看这个控制台显示"><a href="#我们再看看这个控制台显示" class="headerlink" title="我们再看看这个控制台显示"></a>我们再看看这个控制台显示</h4><p><img src="http://i2.buimg.com/567571/c3f7b7e1a94dda04.png" alt=""></p>
+<h4 id="我们用Google扩展工具vue-devtools工具"><a href="#我们用Google扩展工具vue-devtools工具" class="headerlink" title="我们用Google扩展工具vue-devtools工具"></a>我们用Google扩展工具vue-devtools工具</h4><p><img src="http://i4.buimg.com/567571/0b6c1bfcc7b20ce9.png" alt=""></p>
+<p>我们不难发现 一些公共组件都放在common里面 例如slide之类的子组件</p>
+<h4 id="可以使用-v-for-指令基于一个数组渲染一个列表。"><a href="#可以使用-v-for-指令基于一个数组渲染一个列表。" class="headerlink" title="可以使用 v-for 指令基于一个数组渲染一个列表。"></a>可以使用 v-for 指令基于一个数组渲染一个列表。</h4><p>这个指令使用特殊的语法，形式为 item in items，items 是数据数组，item 是当前数组元素的别名,DOM都由前端渲染生成,后端只需传递数据,无需再<br>有前端模板和逻辑,后端语言混淆,我们只需要改变VM结构,便不再像传统非MVVM一样去手动修改完逻辑又去修改DOM结构。用来开发移动端更方便管理应用状态，组件解耦，多人组件共享等等(正在摸索,以前用MUI,SUI之类的jqery库主导的UI库)。<br>下面来看看v-for如何渲染DOM层</p>
+<p><img src="http://i1.piimg.com/567571/456da79cd385a929.png" alt=""><br><img src="http://i1.piimg.com/567571/4e726b1330b4e921.png" alt=""></p>
+<p>这样的前后端分离,效率是不是提高了很多!</p>
+
+    
+    </div>
+    
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解析/">解析</a></li></ul>
+
+</article>
+    </li>
+  
+    <li class="post-list-item">
         <article id="post-开发环境设置" 
   class="article article-type-post" itemprop="blogPost">
      
