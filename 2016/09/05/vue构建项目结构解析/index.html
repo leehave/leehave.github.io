@@ -10,53 +10,59 @@
   
   
   <meta name="keywords" content="解析">
-  <meta name="description" content="Vue.js是一个构建数据驱动的 web 界面的库。Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。
+  <meta name="description" content="Vue.js是一个构建数据驱动的 web 界面的库。Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。其实还是后端玩的那套,只不过借以用之
 
 
 下面我们来看下vue的VM层结构
 
+
 文档结构如下
+
+
 APP是单页起始的父组件模板 其余子组件全部在 conponents文件夹中
+
 文档引入如下
-我们再看看这个控制台显示
-我们用Google扩展工具vue-devtools工具
-我们不难发现 一些公共组件都放在">
+
+1234567891011121314151617181920212">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vuejs结构分析">
 <meta property="og:url" content="https://leehave.github.io/2016/09/05/vue构建项目结构解析/index.html">
 <meta property="og:site_name" content="Director">
-<meta property="og:description" content="Vue.js是一个构建数据驱动的 web 界面的库。Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。
+<meta property="og:description" content="Vue.js是一个构建数据驱动的 web 界面的库。Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。其实还是后端玩的那套,只不过借以用之
 
 
 下面我们来看下vue的VM层结构
 
+
 文档结构如下
+
+
 APP是单页起始的父组件模板 其余子组件全部在 conponents文件夹中
+
 文档引入如下
-我们再看看这个控制台显示
-我们用Google扩展工具vue-devtools工具
-我们不难发现 一些公共组件都放在">
-<meta property="og:image" content="http://i4.buimg.com/567571/a11e399a7451f85a.png">
-<meta property="og:image" content="http://i4.buimg.com/567571/1865865c33f568f1.png">
-<meta property="og:image" content="http://i2.buimg.com/567571/c3f7b7e1a94dda04.png">
-<meta property="og:image" content="http://i4.buimg.com/567571/0b6c1bfcc7b20ce9.png">
-<meta property="og:image" content="http://i1.piimg.com/567571/456da79cd385a929.png">
-<meta property="og:image" content="http://i1.piimg.com/567571/4e726b1330b4e921.png">
-<meta property="og:updated_time" content="2016-09-05T14:16:17.000Z">
+
+1234567891011121314151617181920212">
+<meta property="og:image" content="http://i1.piimg.com/567571/d3cfb1009c60abf4.jpg">
+<meta property="og:image" content="http://i1.piimg.com/567571/df3bab7d4acee9c5.jpg">
+<meta property="og:image" content="http://i1.piimg.com/567571/d742cfd522161991.jpg">
+<meta property="og:updated_time" content="2016-09-05T15:24:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vuejs结构分析">
-<meta name="twitter:description" content="Vue.js是一个构建数据驱动的 web 界面的库。Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。
+<meta name="twitter:description" content="Vue.js是一个构建数据驱动的 web 界面的库。Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。其实还是后端玩的那套,只不过借以用之
 
 
 下面我们来看下vue的VM层结构
 
+
 文档结构如下
+
+
 APP是单页起始的父组件模板 其余子组件全部在 conponents文件夹中
+
 文档引入如下
-我们再看看这个控制台显示
-我们用Google扩展工具vue-devtools工具
-我们不难发现 一些公共组件都放在">
-<meta name="twitter:image" content="http://i4.buimg.com/567571/a11e399a7451f85a.png">
+
+1234567891011121314151617181920212">
+<meta name="twitter:image" content="http://i1.piimg.com/567571/d3cfb1009c60abf4.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Director" type="application/atom+xml">
   
@@ -169,7 +175,7 @@ APP是单页起始的父组件模板 其余子组件全部在 conponents文件�
     <h1 class="author">vuejs结构分析</h1>
     <h5 class="subtitle">
         
-            <time datetime="2016-09-05T14:16:17.000Z" itemprop="datePublished" class="page-time">
+            <time datetime="2016-09-05T15:24:56.000Z" itemprop="datePublished" class="page-time">
   2016-09-05
 </time>
 
@@ -231,7 +237,7 @@ APP是单页起始的父组件模板 其余子组件全部在 conponents文件�
 
             
             <nav class="post-toc-wrap" id="post-toc">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#文档结构如下"><span class="post-toc-text">文档结构如下</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#文档引入如下"><span class="post-toc-text">文档引入如下</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#我们再看看这个控制台显示"><span class="post-toc-text">我们再看看这个控制台显示</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#我们用Google扩展工具vue-devtools工具"><span class="post-toc-text">我们用Google扩展工具vue-devtools工具</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#可以使用-v-for-指令基于一个数组渲染一个列表。"><span class="post-toc-text">可以使用 v-for 指令基于一个数组渲染一个列表。</span></a></li></ol>
+            
             </nav>
             
         </aside>
@@ -240,19 +246,35 @@ APP是单页起始的父组件模板 其余子组件全部在 conponents文件�
 
             <div class="post-content" id="post-content" itemprop="postContent">
             <blockquote>
-<p>Vue.js是一个构建数据驱动的 web 界面的库。Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。</p>
+<p>Vue.js是一个构建数据驱动的 web 界面的库。Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。<br>其实还是后端玩的那套,只不过借以用之</p>
 </blockquote>
 <ul>
 <li>下面我们来看下vue的VM层结构</li>
 </ul>
-<h4 id="文档结构如下"><a href="#文档结构如下" class="headerlink" title="文档结构如下"></a>文档结构如下</h4><p><img src="http://i4.buimg.com/567571/a11e399a7451f85a.png" alt=""></p>
+<blockquote>
+<p>文档结构如下</p>
+</blockquote>
+<p><img src="http://i1.piimg.com/567571/d3cfb1009c60abf4.jpg" alt=""></p>
 <p>APP是单页起始的父组件模板 其余子组件全部在 <code>conponents</code>文件夹中</p>
-<h4 id="文档引入如下"><a href="#文档引入如下" class="headerlink" title="文档引入如下"></a>文档引入如下</h4><p><img src="http://i4.buimg.com/567571/1865865c33f568f1.png" alt=""></p>
-<h4 id="我们再看看这个控制台显示"><a href="#我们再看看这个控制台显示" class="headerlink" title="我们再看看这个控制台显示"></a>我们再看看这个控制台显示</h4><p><img src="http://i2.buimg.com/567571/c3f7b7e1a94dda04.png" alt=""></p>
-<h4 id="我们用Google扩展工具vue-devtools工具"><a href="#我们用Google扩展工具vue-devtools工具" class="headerlink" title="我们用Google扩展工具vue-devtools工具"></a>我们用Google扩展工具vue-devtools工具</h4><p><img src="http://i4.buimg.com/567571/0b6c1bfcc7b20ce9.png" alt=""></p>
+<blockquote>
+<p>文档引入如下</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">	&lt;div class=&quot;goods-container&quot;&gt;</div><div class="line">		&lt;goods-top-box&gt;&lt;/goods-top-box&gt;</div><div class="line">		&lt;goods-collocation&gt;&lt;/goods-collocation&gt;</div><div class="line">		&lt;goods-accessories&gt;&lt;/goods-accessories&gt;</div><div class="line">		&lt;goods-around&gt;&lt;/goods-around&gt;</div><div class="line">		&lt;recommend&gt;&lt;/recommend&gt;</div><div class="line">		&lt;hot-product&gt;&lt;/hot-product&gt;</div><div class="line">		&lt;goods-content&gt;&lt;/goods-content&gt;</div><div class="line">		&lt;video&gt;&lt;/video&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">import GoodsTopBox from &apos;./GoodsTopBox&apos;</div><div class="line">import GoodsCollocation from &apos;./GoodsCollocation&apos;</div><div class="line">import GoodsAccessories from &apos;./GoodsAccessories&apos;</div><div class="line">import GoodsAround from &apos;./GoodsAround&apos;</div><div class="line">import Recommend from &apos;./Recommend&apos;</div><div class="line">import HotProduct from &apos;./HotProduct&apos;</div><div class="line">import GoodsContent from &apos;./GoodsContent&apos;</div><div class="line">import Video from &apos;./Video&apos;vue</div><div class="line"></div><div class="line">export default &#123;</div><div class="line">	components: &#123;</div><div class="line">		&apos;goods-top-box&apos;: GoodsTopBox,</div><div class="line">		&apos;goods-collocation&apos;: GoodsCollocation,</div><div class="line">		&apos;goods-accessories&apos;: GoodsAccessories,</div><div class="line">		&apos;goods-around&apos;: GoodsAround,</div><div class="line">		&apos;recommend&apos;: Recommend,</div><div class="line">		&apos;hot-product&apos;: HotProduct,</div><div class="line">		&apos;goods-content&apos;: GoodsContent,</div><div class="line">		&apos;video&apos;: Video</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;style&gt;</div><div class="line">.goods-container &#123;</div><div class="line">	width: 100%;</div><div class="line">	height: auto;</div><div class="line">	background: #f5f5f5;</div><div class="line">	padding-bottom: 40px;</div><div class="line">&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>我们再看看这个控制台显示</p>
+</blockquote>
+<p><img src="http://i1.piimg.com/567571/df3bab7d4acee9c5.jpg" alt=""></p>
+<blockquote>
+<p>我们用Google扩展工具vue-devtools工具</p>
+</blockquote>
+<p><img src="http://i1.piimg.com/567571/d742cfd522161991.jpg" alt=""></p>
 <p>我们不难发现 一些公共组件都放在common里面 例如slide之类的子组件</p>
-<h4 id="可以使用-v-for-指令基于一个数组渲染一个列表。"><a href="#可以使用-v-for-指令基于一个数组渲染一个列表。" class="headerlink" title="可以使用 v-for 指令基于一个数组渲染一个列表。"></a>可以使用 v-for 指令基于一个数组渲染一个列表。</h4><p>这个指令使用特殊的语法，形式为 item in items，items 是数据数组，item 是当前数组元素的别名,DOM都由前端渲染生成,后端只需传递数据,无需再<br>有前端模板和逻辑,后端语言混淆,我们只需要改变VM结构,便不再像传统非MVVM一样去手动修改完逻辑又去修改DOM结构。用来开发移动端更方便管理应用状态，组件解耦，多人组件共享等等(正在摸索,以前用MUI,SUI之类的jqery库主导的UI库)。<br>下面来看看v-for如何渲染DOM层</p>
-<p><img src="http://i1.piimg.com/567571/456da79cd385a929.png" alt=""><br><img src="http://i1.piimg.com/567571/4e726b1330b4e921.png" alt=""></p>
+<blockquote>
+<p>可以使用 v-for 指令基于一个数组渲染一个列表。</p>
+</blockquote>
+<p>这个指令使用特殊的语法，形式为 item in items，items 是数据数组，item 是当前数组元素的别名,DOM都由前端渲染生成,后端只需传递数据,无需再<br>有前端模板和逻辑,后端语言混淆,我们只需要改变VM结构,便不再像传统非MVVM一样去手动修改完逻辑又去修改DOM结构。用来开发移动端更方便管理应用状态，组件解耦，多人组件共享等等(正在摸索,以前用MUI,SUI之类的jqery库主导的UI库)。<br>下面来看看v-for如何渲染DOM层</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">	&lt;div class=&quot;product-container&quot;&gt;</div><div class="line">		&lt;goods-header :title=&quot;title&quot;&gt;&lt;/goods-header&gt;</div><div class="line">		&lt;div class=&quot;box-bd&quot;&gt;</div><div class="line">			&lt;ul class=&quot;content-list clearfix&quot;&gt;</div><div class="line">				&lt;li&gt;</div><div class="line">					&lt;template v-for=&quot;content in contents&quot;&gt;</div><div class="line">						&lt;good-content-slide :content=&quot;content&quot;&gt;&lt;/good-content-slide&gt;</div><div class="line">					&lt;/template&gt;</div><div class="line">				&lt;/li&gt;</div><div class="line">			&lt;/ul&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/template&gt;</div></pre></td></tr></table></figure>
+<p>数据层json传递数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">import GoodsHeader from &apos;./common/GoodsHeader&apos;</div><div class="line">import GoodsContentSlide from &apos;./common/GoodsContentSlide&apos;</div><div class="line">export default &#123;</div><div class="line">	data () &#123;</div><div class="line">		return &#123;</div><div class="line">			currPage: 0,</div><div class="line">			title: &apos;内容&apos;,</div><div class="line">			contents: [</div><div class="line">				&#123;</div><div class="line">					title: &apos;图书&apos;,</div><div class="line">					type: &apos;book&apos;,</div><div class="line">					list: [</div><div class="line">						&#123;sourceUrl: &apos;http://www.duokan.com/book/115222&apos;, title: &apos;哈利·波特与魔法石&apos;, desc: &apos;哈利波特来了&apos;, imgUrl: &apos;//i3.mifile.cn/a4/8e3584b6-3169-41c6-9356-939ec79aac2b&apos;, type: 0&#125;,</div><div class="line">						&#123;sourceUrl: &apos;http://www.duokan.com/special/7812&apos;, title: &apos;特价专区&apos;, desc: &apos;精选畅销好书，特价促销，天天更新，天天特价！&apos;, price: &apos;限时优惠&apos;, imgUrl: &apos;//i3.mifile.cn/a4/T1dlVgBbbT1RXrhCrK.jpg&apos;, type: 1&#125;,</div><div class="line">						&#123;sourceUrl: &apos;http://www.duokan.com/list/9-1&apos;, title: &apos;杂志专区&apos;, desc: &apos;纸媒杂志＋互联网杂志，你想看的这都有！&apos;, price: &apos;同步新刊上线&apos;, imgUrl: &apos;//i3.mifile.cn/a4/T1R3WgBjKT1RXrhCrK.jpg&apos;, type: 1&#125;,</div><div class="line">						&#123;sourceUrl: &apos;http://www.duokan.com/list/1-1?from=xiaomi&apos;, desc1: &apos;海量好书，享受精品阅读时光&apos;, desc2: &apos;漂亮的中文排版，千万读者选择！&apos;, btnTxt: &apos;前往多看阅读&apos;, price: &apos;限时优惠&apos;, imgUrl: &apos;//s01.mifile.cn/i/index/more-duokan.jpg&apos;, type: 2&#125;</div><div class="line">					]</div><div class="line">				&#125;,</div><div class="line">				&#123;</div><div class="line">					title: &apos;MIUI主题&apos;,</div><div class="line">					type: &apos;theme&apos;,</div><div class="line">					list: [</div><div class="line">						&#123;sourceUrl: &apos;http://zhuti.xiaomi.com/detail/4ecf4ebb-7cba-4142-96aa-6b8deb2426ef&apos;, title: &apos;新世纪福音战士OL&apos;, desc: &apos;EVA手游正版授权，同名主题，高能来袭！&apos;, price: &apos;免费&apos;, imgUrl: &apos;http://i3.mifile.cn/a4/7d47dde1-60fb-4ff3-8fa1-364cfc452457&apos;, type: 1&#125;,</div><div class="line">						&#123;sourceUrl: &apos;http://zhuti.xiaomi.com/detail/d6277519-ca46-420c-ab09-060f6d293f94&apos;, title: &apos;世界就在这里&apos;, desc: &apos;“青春的世界里，每一刻都要用尽全力欢呼”&apos;, price: &apos;免费&apos;, imgUrl: &apos;http://i3.mifile.cn/a4/b2c8ca37-4ba8-4af8-b87e-91847980a278&apos;, type: 1&#125;,</div><div class="line">						&#123;sourceUrl: &apos;http://zhuti.xiaomi.com/detail/13df18d4-e52c-4a61-82e3-97014f21bd77&apos;, title: &apos;不悔剑三&apos;, desc: &apos;精品剑网三同人主题 浪漫武侠 共闯天涯&apos;, price: &apos;3米币&apos;, imgUrl: &apos;http://i3.mifile.cn/a4/10af68f9-3012-48bb-85b1-ad3b0646dfdb&apos;, type: 1&#125;,</div><div class="line">						&#123;sourceUrl: &apos;http://zhuti.xiaomi.com/?from=mi&apos;, desc1: &apos;众多个性主题、百变锁屏与自由桌面&apos;, desc2: &apos;让你的手机与众不同！&apos;, btnTxt: &apos;前往MIUI主题市场&apos;, price: &apos;限时优惠&apos;, imgUrl: &apos;//s01.mifile.cn/i/index/more-duokan.jpg&apos;, type: 2&#125;</div><div class="line">					]</div><div class="line">				&#125;,</div><div class="line">				&#123;</div><div class="line">					title: &apos;游戏&apos;,</div><div class="line">					type: &apos;game&apos;,</div><div class="line">					list: [</div><div class="line">						&#123;sourceUrl: &apos;http://ljm.mi.com/?channel=meng_1084_1_android&apos;, title: &apos;老九门&apos;, desc: &apos;盗墓笔记前传上线&apos;, price: &apos;免费&apos;, imgUrl: &apos;http://i3.mifile.cn/a4/6032cb36-587f-4366-89ef-aefed2546552&apos;, type: 1&#125;,</div><div class="line">						&#123;sourceUrl: &apos;http://game.xiaomi.com/miyou/index.html&apos;, title: &apos;米柚手游模拟器&apos;, desc: &apos;在电脑上玩遍小米所有手游&apos;, price: &apos;免费&apos;, imgUrl: &apos;//i3.mifile.cn/a4/T1czW_BXCv1R4cSCrK.png&apos;, type: 1&#125;,</div><div class="line">						&#123;sourceUrl: &apos;http://game.xiaomi.com/app-appdetail--app_id__581412.html&apos;, title: &apos;剑侠情缘&apos;, desc: &apos;玩剑侠情缘手游，领666壕礼！！&apos;, price: &apos;免费&apos;, imgUrl: &apos;http://i3.mifile.cn/a4/010948ae-bd48-49c6-af12-4ec8c4a0c829&apos;, type: 1&#125;,</div><div class="line">						&#123;sourceUrl: &apos;http://game.xiaomi.com/index.php?c=index&amp;a=run&apos;, desc1: &apos;免费下载海量的手机游戏&apos;, desc2: &apos;天天都有现金福利赠送&apos;, btnTxt: &apos;前往小米游戏商店&apos;, price: &apos;限时优惠&apos;, imgUrl: &apos;//s01.mifile.cn/i/index/more-game.jpg&apos;, type: 2&#125;</div><div class="line">					]</div><div class="line">				&#125;,</div><div class="line">				&#123;</div><div class="line">					title: &apos;应用&apos;,</div><div class="line">					type: &apos;app&apos;,</div><div class="line">					list: [</div><div class="line">						&#123;sourceUrl: &apos;http://app.mi.com/subject/168797&apos;, title: &apos;2015年度应用&apos;, desc: &apos;2015年度应用&apos;, price: &apos;免费&apos;, imgUrl: &apos;//i3.mifile.cn/a4/T1YyJgBCYv1R4cSCrK.png&apos;, type: 1&#125;,</div><div class="line">						&#123;sourceUrl: &apos;http://app.mi.com/subject/168798&apos;, title: &apos;2015年度游戏&apos;, desc: &apos;2015年度游戏&apos;, price: &apos;免费&apos;, imgUrl: &apos;//i3.mifile.cn/a4/T1eaxgB4Ev1R4cSCrK.png&apos;, type: 1&#125;,</div><div class="line">						&#123;sourceUrl: &apos;http://app.mi.com/subject/167924&apos;, title: &apos;小米应用&apos;, desc: &apos;小米出品 必属精品&apos;, price: &apos;免费&apos;, imgUrl: &apos;//i3.mifile.cn/a4/T15VZvB5Kv1R4cSCrK.png&apos;, type: 1&#125;,</div><div class="line">						&#123;sourceUrl: &apos;http://app.mi.com/?from=mi&apos;, desc1: &apos;帮助小米手机和其他安卓手机用户&apos;, desc2: &apos;发现好用的安卓应用&apos;, btnTxt: &apos;前往小米应用商店&apos;, price: &apos;限时优惠&apos;, imgUrl: &apos;//s01.mifile.cn/i/index/more-app.jpg&apos;, type: 2&#125;</div><div class="line">					]</div><div class="line">				&#125;]</div><div class="line">		&#125;</div><div class="line">	&#125;,</div><div class="line">	components: &#123;</div><div class="line">		&apos;goods-header&apos;: GoodsHeader,</div><div class="line">		&apos;good-content-slide&apos;: GoodsContentSlide</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
 <p>这样的前后端分离,效率是不是提高了很多!</p>
 
             <blockquote>
