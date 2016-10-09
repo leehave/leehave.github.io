@@ -155,7 +155,7 @@
 
 
     <div class="post-meta">
-        <time datetime="2016-10-09T07:34:00.000Z" itemprop="datePublished" class="post-time">
+        <time datetime="2016-10-09T07:43:24.000Z" itemprop="datePublished" class="post-time">
   2016-10-09
 </time>
 
@@ -167,9 +167,9 @@
     <div class="post-content" id="post-content" itemprop="postContent" >
     
         <blockquote>
-<p>1.以下所有示例都会弹出 <code>&quot;Boo&quot;</code>警告窗,您能解释其中的原因吗?</p>
+<p>这些题目是考察JavaScript函数的基本概念内容</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//1</div><div class="line">var f = alert;</div><div class="line">eval(&apos;f(&quot;Boo!&quot;)&apos;);</div><div class="line">undefined</div><div class="line"></div><div class="line"></div><div class="line">//2</div><div class="line">var e;</div><div class="line">var f = alert;</div><div class="line">eval(&apos;e=f&apos;)(&apos;Boo&apos;);</div><div class="line">undefined</div><div class="line"></div><div class="line">//3</div><div class="line">(function()&#123;</div><div class="line">   return alert;</div><div class="line">&#125;)()(&apos;Boo&apos;)</div></pre></td></tr></table></figure>
+<h2 id="1-以下所有示例都会弹出-quot-Boo-quot-警告窗-您能解释其中的原因吗"><a href="#1-以下所有示例都会弹出-quot-Boo-quot-警告窗-您能解释其中的原因吗" class="headerlink" title="1.以下所有示例都会弹出 &quot;Boo&quot;警告窗,您能解释其中的原因吗?"></a>1.以下所有示例都会弹出 <code>&quot;Boo&quot;</code>警告窗,您能解释其中的原因吗?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var f = alert;</div><div class="line">eval(&apos;f(&quot;Boo!&quot;)&apos;);</div><div class="line">undefined</div><div class="line"></div><div class="line"></div><div class="line">//2</div><div class="line">var e;</div><div class="line">var f = alert;</div><div class="line">eval(&apos;e=f&apos;)(&apos;Boo&apos;);</div><div class="line">undefined</div><div class="line"></div><div class="line">//3</div><div class="line">(function()&#123;</div><div class="line">   return alert;</div><div class="line">&#125;)()(&apos;Boo&apos;)</div></pre></td></tr></table></figure>
     
     </div>
     
