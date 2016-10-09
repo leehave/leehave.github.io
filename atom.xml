@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://leehave.github.io/"/>
-  <updated>2016-09-05T15:27:09.000Z</updated>
+  <updated>2016-10-09T07:34:00.000Z</updated>
   <id>https://leehave.github.io/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>javascript面试题</title>
+    <link href="https://leehave.github.io/2016/10/09/%E5%87%A0%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>https://leehave.github.io/2016/10/09/几道面试题/</id>
+    <published>2016-10-09T07:34:00.000Z</published>
+    <updated>2016-10-09T07:34:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>1.以下所有示例都会弹出 <code>&quot;Boo&quot;</code>警告窗,您能解释其中的原因吗?</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//1</div><div class="line">var f = alert;</div><div class="line">eval(&apos;f(&quot;Boo!&quot;)&apos;);</div><div class="line">undefined</div><div class="line"></div><div class="line"></div><div class="line">//2</div><div class="line">var e;</div><div class="line">var f = alert;</div><div class="line">eval(&apos;e=f&apos;)(&apos;Boo&apos;);</div><div class="line">undefined</div><div class="line"></div><div class="line">//3</div><div class="line">(function()&#123;</div><div class="line">   return alert;</div><div class="line">&#125;)()(&apos;Boo&apos;)</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<blockquote>
+<p>2.下面代码中,alert()弹出的内容会是什么?</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">function f() &#123;</div><div class="line">  var a = 2;</div><div class="line">  function n() &#123;</div><div class="line">    alert(a);</div><div class="line">  &#125;</div><div class="line">  n();</div><div class="line">&#125;</div><div class="line">f();</div></pre></td></tr></table></figure>
+<blockquote>
+<p>3.如果在控制台中执行以下各行,分别会输出什么内容?</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">parseInt(lel)</div><div class="line">parseInt(&apos;lel&apos;)</div><div class="line">parseFloat(&apos;lel&apos;)</div><div class="line">isFinite(0/10)</div><div class="line">isFinite(20/0)</div><div class="line">isNaN(parseInt(NaN))</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;1.以下所有示例都会弹出 &lt;code&gt;&amp;quot;Boo&amp;quot;&lt;/code&gt;警告窗,您能解释其中的原因吗?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;//1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var f = alert;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;eval(&amp;apos;f(&amp;quot;Boo!&amp;quot;)&amp;apos;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;undefined&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;//2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var e;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var f = alert;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;eval(&amp;apos;e=f&amp;apos;)(&amp;apos;Boo&amp;apos;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;undefined&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;//3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;(function()&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   return alert;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;)()(&amp;apos;Boo&amp;apos;)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://leehave.github.io/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>vuejs结构分析</title>
