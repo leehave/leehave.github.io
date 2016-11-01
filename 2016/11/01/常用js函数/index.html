@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>常用js函数 | Director | It&#39;s going down,I&#39;m yelling timber,You better move,you better dance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="theme-color" content="#3F51B5">
+  
+  
+  <meta name="keywords" content="函数 总结">
+  <meta name="description" content="Ajax请求jquery ajax函数
+我自己封装了一个ajax的函数，代码如下：
+var Ajax = function(url, type success, error) {    $.ajax({        url: url,        type: type,        dataType: ‘json’,        timeout: 10000,        success">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用js函数">
+<meta property="og:url" content="https://leehave.github.io/2016/11/01/常用js函数/index.html">
+<meta property="og:site_name" content="Director">
+<meta property="og:description" content="Ajax请求jquery ajax函数
+我自己封装了一个ajax的函数，代码如下：
+var Ajax = function(url, type success, error) {    $.ajax({        url: url,        type: type,        dataType: ‘json’,        timeout: 10000,        success">
+<meta property="og:updated_time" content="2016-11-01T02:11:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="常用js函数">
+<meta name="twitter:description" content="Ajax请求jquery ajax函数
+我自己封装了一个ajax的函数，代码如下：
+var Ajax = function(url, type success, error) {    $.ajax({        url: url,        type: type,        dataType: ‘json’,        timeout: 10000,        success">
+  
+    <link rel="alternative" href="/atom.xml" title="Director" type="application/atom+xml">
+  
+  <meta name="summary" content="Director">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner flex-row-vertical">
+  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="/" class="avatar"><img src="/img/logo.jpg"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">Director</h5>
+        <a href="mailto:undefined" title="1831553725@qq.com" class="mail">1831553725@qq.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <ul class="nav flex-col">
+    
+        <li class="waves-block waves-effect">
+          <a href="/"  >
+            <i class="icon icon-lg icon-home"></i>
+            主页
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="/archives"  >
+            <i class="icon icon-lg icon-archives"></i>
+            Archives
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="/tags"  >
+            <i class="icon icon-lg icon-tags"></i>
+            Tags
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="https://github.com/leehave" target="_blank" >
+            <i class="icon icon-lg icon-github"></i>
+            Github
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="http://weibo.com/u/2869337292" target="_blank" >
+            <i class="icon icon-lg icon-weibo"></i>
+            Weibo
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="/404"  >
+            <i class="icon icon-lg icon-link"></i>
+            测试
+          </a>
+        </li>
+    
+  </ul>
+
+  <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>Director &copy; 2016</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">常用js函数</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">常用js函数</h1>
+    <h5 class="subtitle">
+        
+            <time datetime="2016-11-01T02:11:36.000Z" itemprop="datePublished" class="page-time">
+  2016-11-01
+</time>
+
+
+        
+    </h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      <article id="post-常用js函数" 
+  class="article article-type-post" itemprop="blogPost">
+    <div class="post-meat flex-row">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/函数-总结/">函数 总结</a></li></ul>
+
+    </div>
+    <div class="post-body">
+        <aside class="post-widget" id="post-widget">
+
+            
+            <div class="post-share" id="post-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+            
+
+            
+            <nav class="post-toc-wrap" id="post-toc">
+            
+            </nav>
+            
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" id="post-content" itemprop="postContent">
+            <p>Ajax请求<br>jquery ajax函数</p>
+<p>我自己封装了一个ajax的函数，代码如下：</p>
+<p>var Ajax = function(url, type success, error) {<br>    $.ajax({<br>        url: url,<br>        type: type,<br>        dataType: ‘json’,<br>        timeout: 10000,<br>        success: function(d) {<br>            var data = d.data;<br>            success &amp;&amp; success(data);<br>        },<br>        error: function(e) {<br>            error &amp;&amp; error(e);<br>        }<br>    });<br>    };<br>// 使用方法：<br>Ajax(‘/data.json’, ‘get’, function(data) {<br>    console.log(data);<br>    });<br>jsonp方式</p>
+<p>有时候我们为了跨域，要使用jsonp的方法，我也封装了一个函数：</p>
+<p>function jsonp(config) {<br>    var options = config || {};   // 需要配置url, success, time, fail四个属性<br>    var callbackName = (‘jsonp_’ + Math.random()).replace(“.”, “”);<br>    var oHead = document.getElementsByTagName(‘head’)[0];<br>    var oScript = document.createElement(‘script’);<br>    oHead.appendChild(oScript);<br>    window[callbackName] = function(json) {  //创建jsonp回调函数<br>        oHead.removeChild(oScript);<br>        clearTimeout(oScript.timer);<br>        window[callbackName] = null;<br>        options.success &amp;&amp; options.success(json);   //先删除script标签，实际上执行的是success函数<br>    };<br>    oScript.src = options.url + ‘?’ + callbackName;    //发送请求<br>    if (options.time) {  //设置超时处理<br>        oScript.timer = setTimeout(function () {<br>            window[callbackName] = null;<br>            oHead.removeChild(oScript);<br>            options.fail &amp;&amp; options.fail({ message: “超时” });<br>        }, options.time);<br>    }<br>    };<br>// 使用方法：<br>jsonp({<br>    url: ‘/b.com/b.json’,<br>    success: function(d){<br>        //数据处理<br>    },<br>    time: 5000,<br>    fail: function(){<br>        //错误处理<br>    }<br>    });<br>常用正则验证表达式</p>
+<p>手机号验证</p>
+<p>var validate = function(num) {<br>    var exp = /^1[3-9]\d{9}$/;<br>    return exp.test(num);<br>    };<br>身份证号验证</p>
+<p>var exp = /^[1-9]{1}[0-9]{14}$|^[1-9]{1}[0-9]{16}([0-9]|[xX])$/;<br>ip验证</p>
+<p>var exp = /^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5]).(\d{1,2}|1\d\d|2[0-4]\d|25[0-5]).(\d{1,2}|1\d\d|2[0-4]\d|25[0-5]).(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$/;<br>常用js函数</p>
+<p>返回顶部</p>
+<p>$(window).scroll(function() {<br>    var a = $(window).scrollTop();<br>    if(a &gt; 100) {<br>        $(‘.go-top’).fadeIn();<br>    }else {<br>        $(‘.go-top’).fadeOut();<br>    }<br>    });<br>$(“.go-top”).click(function(){<br>    $(“html,body”).animate({scrollTop:”0px”},’600’);<br>    });<br>阻止冒泡</p>
+<p>function stopBubble(e){<br>    e = e || window.event;<br>    if(e.stopPropagation){<br>        e.stopPropagation();  //W3C阻止冒泡方法<br>    }else {<br>        e.cancelBubble = true; //IE阻止冒泡方法<br>    }<br>    }<br>全部替换replaceAll</p>
+<p>var replaceAll = function(bigStr, str1, str2) {  //把bigStr中的所有str1替换为str2<br>    var reg = new RegExp(str1, ‘gm’);<br>    return bigStr.replace(reg, str2);<br>    }<br>获取浏览器url中的参数值</p>
+<p>var getURLParam = function(name) {<br>    return decodeURIComponent((new RegExp(‘[?|&amp;]’ + name + ‘=’ + ‘([^&amp;;]+?)(&amp;|#|;|$)’, “ig”).exec(location.search) || [, “”])[1].replace(/+/g, ‘%20’)) || null;<br>    };<br>深度拷贝对象</p>
+<p>function cloneObj(obj) {<br>    var o = obj.constructor == Object ? new obj.constructor() : new obj.constructor(obj.valueOf());<br>    for(var key in obj){<br>        if(o[key] != obj[key] ){<br>            if(typeof(obj[key]) == ‘object’ ){<br>                o[key] = mods.cloneObj(obj[key]);<br>            }else{<br>                o[key] = obj[key];<br>            }<br>        }<br>    }<br>    return o;<br>    }<br>数组去重</p>
+<p>var unique = function(arr) {<br>    var result = [], json = {};<br>    for (var i = 0, len = arr.length; i &lt; len; i++){<br>        if (!json[arr[i]]) {<br>            json[arr[i]] = 1;<br>            result.push(arr[i]);  //返回没被删除的元素<br>        }<br>    }<br>    return result;<br>    };<br>判断数组元素是否重复</p>
+<p>var isRepeat = function(arr) {  //arr是否有重复元素<br>    var hash = {};<br>    for (var i in arr) {<br>        if (hash[arr[i]]) return true;<br>        hash[arr[i]] = true;<br>    }<br>    return false;<br>    };<br>生成随机数</p>
+<p>function randombetween(min, max){<br>    return min + (Math.random() * (max-min +1));<br>    }<br>操作cookie</p>
+<p>own.setCookie = function(cname, cvalue, exdays){<br>    var d = new Date();<br>    d.setTime(d.getTime() + (exdays<em>24</em>60<em>60</em>1000));<br>    var expires = ‘expires=’+d.toUTCString();<br>    document.cookie = cname + ‘=’ + cvalue + ‘; ‘ + expires;<br>    };<br>own.getCookie = function(cname) {<br>    var name = cname + ‘=’;<br>    var ca = document.cookie.split(‘;’);<br>    for(var i=0; i&lt; ca.length; i++) {<br>        var c = ca[i];<br>        while (c.charAt(0) == ‘ ‘) c = c.substring(1);<br>        if (c.indexOf(name) != -1) return c.substring(name.length, c.length);<br>    }<br>    return ‘’;<br>    };</p>
+<p>知识技巧总结</p>
+<p>数据类型</p>
+<p>underfined、null、0、false、NaN、空字符串。他们的逻辑非结果均为true。</p>
+<p>闭包格式</p>
+<p>好处：避免命名冲突（全局变量污染）。</p>
+<p>(function(a, b) {<br>    console.log(a+b);  //30<br>    })(10, 20);<br>截取和清空数组</p>
+<p>var arr = [12, 222, 44, 88];<br>arr.length = 2;   //截取，arr = [12, 222];<br>arr.length = 0;   //清空，arr will be equal to [].<br>获取数组的最大最小值</p>
+<p>var numbers = [5, 45822, 120, -215];<br>var maxInNumbers = Math.max.apply(Math, numbers);   //45822<br>var minInNumbers = Math.min.apply(Math, numbers);   //-215<br>浮点数计算问题</p>
+<p>0.1 + 0.2 == 0.3   //false<br>为什么呢？因为0.1+0.2等于0.30000000000000004。JavaScript的数字都遵循IEEE 754标准构建，在内部都是64位浮点小数表示。可以通过使用toFixed()来解决这个问题。</p>
+<p>数组排序sort函数</p>
+<p>var arr = [1, 5, 6, 3];    //数字数组<br>arr.sort(function(a, b) {<br>    return a - b;   //从小到大排<br>    return b - a;   //从大到小排<br>    return Math.random() - 0.5;   //数组洗牌<br>    });<br>var arr = [{   //对象数组<br>    num: 1,<br>    text: ‘num1’<br>    }, {<br>    num: 5,<br>    text: ‘num2’<br>    }, {<br>    num: 6,<br>    text: ‘num3’<br>    }, {<br>    num: 3,<br>    text: ‘num4’<br>    }];<br>arr.sort(function(a, b) {<br>    return a.num - b.num;   //从小到大排<br>    return b.num - a.num;   //从大到小排<br>    });<br>对象和字符串的转换</p>
+<p>var obj = {a: ‘aaa’, b: ‘bbb’};<br>var objStr = JSON.stringify(obj);    // “{“a”:”aaa”,”b”:”bbb”}”<br>var newObj = JSON.parse(objStr);     // {a: “aaa”, b: “bbb”}<br>git笔记</p>
+<p>git使用之前的配置</p>
+<p>1.git config –global user.email xxx@163.com<br>2.git config –global user.name xxx<br>3.ssh-keygen -t rsa -C xxx@163.com(邮箱地址)      // 生成ssh<br>4.找到.ssh文件夹打开，使用cat id_rsa.pub    //打开公钥ssh串<br>5.登陆github，settings － SSH keys  － add ssh keys （把上面的内容全部添加进去即可）<br>说明：然后这个邮箱（xxxxx@gmail.com）对应的账号在github上就有权限对仓库进行操作了。可以尽情的进行下面的git命令了。<br>git常用命令</p>
+<p>1、git config user.name  /  user.email     //查看当前git的用户名称、邮箱<br>2、git clone <a href="https://github.com/jarson7426/javascript.git" target="_blank" rel="external">https://github.com/jarson7426/javascript.git</a>  project  //clone仓库到本地。<br>3、修改本地代码，提交到分支:  git add file   /   git commit -m “新增文件”<br>4、把本地库推送到远程库:  git push origin master<br>5、查看提交日志：git log -5<br>6、返回某一个版本：git reset –hard 123<br>7、分支：git branch / git checkout name  / git checkout -b dev<br>8、合并name分支到当前分支：git merge name   /   git pull origin<br>9、删除本地分支：git branch -D name<br>10、删除远程分支： git push origin  :daily/x.x.x<br>11、git checkout -b mydev origin/daily/1.0.0    //把远程daily分支映射到本地mydev分支进行开发<br>12、合并远程分支到当前分支 git pull origin daily/1.1.1<br>13、发布到线上：<br>    git tag publish/0.1.5<br>    git push origin publish/0.1.5:publish/0.1.5<br>    14、线上代码覆盖到本地：<br>    git checkout –theirs build/scripts/ddos<br>    git checkout –theirs src/app/ddos</p>
+
+            <blockquote>
+                <p>
+                本文地址：
+                <a href="https://leehave.github.io/2016/11/01/常用js函数/" target="_blank" rel="external">https://leehave.github.io/2016/11/01/常用js函数/</a>
+                </p>
+                <footer><cite><a href="https://leehave.github.io">@Director</a></cite></footer>
+            </blockquote>
+            </div>
+            
+<nav class="post-nav">
+  
+
+  
+    <div class="waves-block waves-effect next fr">
+      <a href="/2016/10/09/几道面试题/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">javascript面试题</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+            
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="常用js函数" data-title="常用js函数" data-url="https://leehave.github.io/2016/11/01/常用js函数/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"disqus_shortname"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+        </div>
+    </div>
+</article>
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<script>
+var BLOG_SHARE = {
+    title: "常用js函数",
+    pic: "/img/logo.jpg",
+    summary: document.getElementsByName('summary')[0].content,
+    url: "https://leehave.github.io/2016/11/01/常用js函数/index.html"
+};
+</script>
+<div class="global-share" id="global-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<script type="text/template" id="search-tpl">
+<li class="item">
+    <a href="/{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</script>
+
+<script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
