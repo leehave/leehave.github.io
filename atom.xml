@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Director</title>
-  <subtitle>It&#39;s going down,I&#39;m yelling timber,You better move,you better dance</subtitle>
+  <subtitle>只为装逼而写,WEB前端笔记集合</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://leehave.github.io/"/>
