@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>常用js函数 | Director | It&#39;s going down,I&#39;m yelling timber,You better move,you better dance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="theme-color" content="#3F51B5">
+  
+  
+  <meta name="keywords" content="函数 总结">
+  <meta name="description" content="Ajax请求jquery ajax函数
+我自己封装了一个ajax的函数，代码如下：
+1234567891011121314151617181920var Ajax = function(url, type success, error) &amp;#123;    $.ajax(&amp;#123;        url: url,        type: type,        dataType: &amp;apo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用js函数">
+<meta property="og:url" content="https://leehave.github.io/2016/11/04/常用js函数/index.html">
+<meta property="og:site_name" content="Director">
+<meta property="og:description" content="Ajax请求jquery ajax函数
+我自己封装了一个ajax的函数，代码如下：
+1234567891011121314151617181920var Ajax = function(url, type success, error) &amp;#123;    $.ajax(&amp;#123;        url: url,        type: type,        dataType: &amp;apo">
+<meta property="og:updated_time" content="2016-11-04T05:15:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="常用js函数">
+<meta name="twitter:description" content="Ajax请求jquery ajax函数
+我自己封装了一个ajax的函数，代码如下：
+1234567891011121314151617181920var Ajax = function(url, type success, error) &amp;#123;    $.ajax(&amp;#123;        url: url,        type: type,        dataType: &amp;apo">
+  
+    <link rel="alternative" href="/atom.xml" title="Director" type="application/atom+xml">
+  
+  <meta name="summary" content="&lt;h3 id=&quot;Ajax请求&quot;&gt;&lt;a href=&quot;#Ajax请求&quot; class=&quot;headerlink&quot; title=&quot;Ajax请求&quot;&gt;&lt;/a&gt;Ajax请求&lt;/h3&gt;&lt;p&gt;jquery ajax函数&lt;/p&gt;
+&lt;p&gt;我自己封装了一个ajax的函数，代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;var Ajax = function(url, type success, error) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $.ajax(&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        url: url,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        type: type,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        dataType: &amp;apos;json&amp;apos;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        timeout: 10000,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        success: function(d) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            var data = d.data;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            success &amp;amp;&amp;amp; success(data);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        error: function(e) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            error &amp;amp;&amp;amp; error(e);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// 使用方法：&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Ajax(&amp;apos;/data.json&amp;apos;, &amp;apos;get&amp;apos;, function(data) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    console.log(data);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;jsonp方式&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner flex-row-vertical">
+  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="/" class="avatar"><img src="/img/logo.jpg"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">Director</h5>
+        <a href="mailto:undefined" title="1831553725@qq.com" class="mail">1831553725@qq.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <ul class="nav flex-col">
+    
+        <li class="waves-block waves-effect">
+          <a href="/"  >
+            <i class="icon icon-lg icon-home"></i>
+            主页
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="/archives"  >
+            <i class="icon icon-lg icon-archives"></i>
+            Archives
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="/tags"  >
+            <i class="icon icon-lg icon-tags"></i>
+            Tags
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="https://github.com/leehave" target="_blank" >
+            <i class="icon icon-lg icon-github"></i>
+            Github
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="http://weibo.com/u/2869337292" target="_blank" >
+            <i class="icon icon-lg icon-weibo"></i>
+            Weibo
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="/404"  >
+            <i class="icon icon-lg icon-link"></i>
+            测试
+          </a>
+        </li>
+    
+  </ul>
+
+  <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>Director &copy; 2016</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">常用js函数</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">常用js函数</h1>
+    <h5 class="subtitle">
+        
+            <time datetime="2016-11-04T05:15:19.000Z" itemprop="datePublished" class="page-time">
+  2016-11-04
+</time>
+
+
+        
+    </h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      <article id="post-常用js函数" 
+  class="article article-type-post" itemprop="blogPost">
+    <div class="post-meat flex-row">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/函数-总结/">函数 总结</a></li></ul>
+
+    </div>
+    <div class="post-body">
+        <aside class="post-widget" id="post-widget">
+
+            
+            <div class="post-share" id="post-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+            
+
+            
+            <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Ajax请求"><span class="post-toc-text">Ajax请求</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常用正则验证表达式"><span class="post-toc-text">常用正则验证表达式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#知识技巧总结"><span class="post-toc-text">知识技巧总结</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git笔记"><span class="post-toc-text">git笔记</span></a></li></ol>
+            </nav>
+            
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="Ajax请求"><a href="#Ajax请求" class="headerlink" title="Ajax请求"></a>Ajax请求</h3><p>jquery ajax函数</p>
+<p>我自己封装了一个ajax的函数，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">var Ajax = function(url, type success, error) &#123;</div><div class="line">    $.ajax(&#123;</div><div class="line">        url: url,</div><div class="line">        type: type,</div><div class="line">        dataType: &apos;json&apos;,</div><div class="line">        timeout: 10000,</div><div class="line">        success: function(d) &#123;</div><div class="line">            var data = d.data;</div><div class="line">            success &amp;&amp; success(data);</div><div class="line">        &#125;,</div><div class="line">        error: function(e) &#123;</div><div class="line">            error &amp;&amp; error(e);</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">    &#125;;</div><div class="line">// 使用方法：</div><div class="line">Ajax(&apos;/data.json&apos;, &apos;get&apos;, function(data) &#123;</div><div class="line">    console.log(data);</div><div class="line">    &#125;);</div><div class="line">jsonp方式</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>有时候我们为了跨域，要使用jsonp的方法，我也封装了一个函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">function jsonp(config) &#123;</div><div class="line">    var options = config || &#123;&#125;;   // 需要配置url, success, time, fail四个属性</div><div class="line">    var callbackName = (&apos;jsonp_&apos; + Math.random()).replace(&quot;.&quot;, &quot;&quot;);</div><div class="line">    var oHead = document.getElementsByTagName(&apos;head&apos;)[0];</div><div class="line">    var oScript = document.createElement(&apos;script&apos;);</div><div class="line">    oHead.appendChild(oScript);</div><div class="line">    window[callbackName] = function(json) &#123;  //创建jsonp回调函数</div><div class="line">        oHead.removeChild(oScript);</div><div class="line">        clearTimeout(oScript.timer);</div><div class="line">        window[callbackName] = null;</div><div class="line">        options.success &amp;&amp; options.success(json);   //先删除script标签，实际上执行的是success函数</div><div class="line">    &#125;;</div><div class="line">    oScript.src = options.url + &apos;?&apos; + callbackName;    //发送请求</div><div class="line">    if (options.time) &#123;  //设置超时处理</div><div class="line">        oScript.timer = setTimeout(function () &#123;</div><div class="line">            window[callbackName] = null;</div><div class="line">            oHead.removeChild(oScript);</div><div class="line">            options.fail &amp;&amp; options.fail(&#123; message: &quot;超时&quot; &#125;);</div><div class="line">        &#125;, options.time);</div><div class="line">    &#125;</div><div class="line">    &#125;;</div><div class="line">// 使用方法：</div><div class="line">jsonp(&#123;</div><div class="line">    url: &apos;/b.com/b.json&apos;,</div><div class="line">    success: function(d)&#123;</div><div class="line">        //数据处理</div><div class="line">    &#125;,</div><div class="line">    time: 5000,</div><div class="line">    fail: function()&#123;</div><div class="line">        //错误处理</div><div class="line">    &#125;       </div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
+<h3 id="常用正则验证表达式"><a href="#常用正则验证表达式" class="headerlink" title="常用正则验证表达式"></a>常用正则验证表达式</h3><p>手机号验证</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var validate = function(num) &#123;</div><div class="line">    var exp = /^1[3-9]\d&#123;9&#125;$/;</div><div class="line">    return exp.test(num);</div><div class="line">    &#125;;</div></pre></td></tr></table></figure>
+<p>身份证号验证</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var exp = /^[1-9]&#123;1&#125;[0-9]&#123;14&#125;$|^[1-9]&#123;1&#125;[0-9]&#123;16&#125;([0-9]|[xX])$/;</div><div class="line">ip验证</div><div class="line"></div><div class="line">var exp = /^(\d&#123;1,2&#125;|1\d\d|2[0-4]\d|25[0-5])\.(\d&#123;1,2&#125;|1\d\d|2[0-4]\d|25[0-5])\.(\d&#123;1,2&#125;|1\d\d|2[0-4]\d|25[0-5])\.(\d&#123;1,2&#125;|1\d\d|2[0-4]\d|25[0-5])$/;</div><div class="line">常用js函数</div></pre></td></tr></table></figure>
+<p>返回顶部</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$(window).scroll(function() &#123;</div><div class="line">    var a = $(window).scrollTop();</div><div class="line">    if(a &gt; 100) &#123;</div><div class="line">        $(&apos;.go-top&apos;).fadeIn();</div><div class="line">    &#125;else &#123;</div><div class="line">        $(&apos;.go-top&apos;).fadeOut();</div><div class="line">    &#125;</div><div class="line">    &#125;);</div><div class="line">$(&quot;.go-top&quot;).click(function()&#123;</div><div class="line">    $(&quot;html,body&quot;).animate(&#123;scrollTop:&quot;0px&quot;&#125;,&apos;600&apos;);</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
+<p>阻止冒泡</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function stopBubble(e)&#123;</div><div class="line">    e = e || window.event;  </div><div class="line">    if(e.stopPropagation)&#123;</div><div class="line">        e.stopPropagation();  //W3C阻止冒泡方法  </div><div class="line">    &#125;else &#123;  </div><div class="line">        e.cancelBubble = true; //IE阻止冒泡方法  </div><div class="line">    &#125;  </div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>全部替换replaceAll</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var replaceAll = function(bigStr, str1, str2) &#123;  //把bigStr中的所有str1替换为str2</div><div class="line">    var reg = new RegExp(str1, &apos;gm&apos;);</div><div class="line">    return bigStr.replace(reg, str2);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>获取浏览器url中的参数值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var getURLParam = function(name) &#123;</div><div class="line">    return decodeURIComponent((new RegExp(&apos;[?|&amp;]&apos; + name + &apos;=&apos; + &apos;([^&amp;;]+?)(&amp;|#|;|$)&apos;, &quot;ig&quot;).exec(location.search) || [, &quot;&quot;])[1].replace(/\+/g, &apos;%20&apos;)) || null;</div><div class="line">    &#125;;</div></pre></td></tr></table></figure>
+<p>深度拷贝对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function cloneObj(obj) &#123;</div><div class="line">    var o = obj.constructor == Object ? new obj.constructor() : new obj.constructor(obj.valueOf());</div><div class="line">    for(var key in obj)&#123;</div><div class="line">        if(o[key] != obj[key] )&#123;</div><div class="line">            if(typeof(obj[key]) == &apos;object&apos; )&#123;</div><div class="line">                o[key] = mods.cloneObj(obj[key]);</div><div class="line">            &#125;else&#123;</div><div class="line">                o[key] = obj[key];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return o;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>数组去重</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var unique = function(arr) &#123;</div><div class="line">    var result = [], json = &#123;&#125;;</div><div class="line">    for (var i = 0, len = arr.length; i &lt; len; i++)&#123;</div><div class="line">        if (!json[arr[i]]) &#123;</div><div class="line">            json[arr[i]] = 1;</div><div class="line">            result.push(arr[i]);  //返回没被删除的元素</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return result;</div><div class="line">    &#125;;</div></pre></td></tr></table></figure>
+<p>判断数组元素是否重复</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var isRepeat = function(arr) &#123;  //arr是否有重复元素</div><div class="line">    var hash = &#123;&#125;;</div><div class="line">    for (var i in arr) &#123;</div><div class="line">        if (hash[arr[i]]) return true;</div><div class="line">        hash[arr[i]] = true;</div><div class="line">    &#125;</div><div class="line">    return false;</div><div class="line">    &#125;;</div></pre></td></tr></table></figure>
+<p>生成随机数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function randombetween(min, max)&#123;</div><div class="line">    return min + (Math.random() * (max-min +1));</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>操作cookie</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">own.setCookie = function(cname, cvalue, exdays)&#123;</div><div class="line">    var d = new Date();</div><div class="line">    d.setTime(d.getTime() + (exdays*24*60*60*1000));</div><div class="line">    var expires = &apos;expires=&apos;+d.toUTCString();</div><div class="line">    document.cookie = cname + &apos;=&apos; + cvalue + &apos;; &apos; + expires;</div><div class="line">    &#125;;</div><div class="line">own.getCookie = function(cname) &#123;</div><div class="line">    var name = cname + &apos;=&apos;;</div><div class="line">    var ca = document.cookie.split(&apos;;&apos;);</div><div class="line">    for(var i=0; i&lt; ca.length; i++) &#123;</div><div class="line">        var c = ca[i];</div><div class="line">        while (c.charAt(0) == &apos; &apos;) c = c.substring(1);</div><div class="line">        if (c.indexOf(name) != -1) return c.substring(name.length, c.length);</div><div class="line">    &#125;</div><div class="line">    return &apos;&apos;;</div><div class="line">    &#125;;</div></pre></td></tr></table></figure>
+<h3 id="知识技巧总结"><a href="#知识技巧总结" class="headerlink" title="知识技巧总结"></a>知识技巧总结</h3><p>数据类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">underfined、null、0、false、NaN、空字符串。他们的逻辑非结果均为true。</div></pre></td></tr></table></figure>
+<p>闭包格式</p>
+<p>好处：避免命名冲突（全局变量污染）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(function(a, b) &#123;</div><div class="line">    console.log(a+b);  //30</div><div class="line">    &#125;)(10, 20);</div></pre></td></tr></table></figure>
+<p>截取和清空数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [12, 222, 44, 88];</div><div class="line">arr.length = 2;   //截取，arr = [12, 222];  </div><div class="line">arr.length = 0;   //清空，arr will be equal to [].</div></pre></td></tr></table></figure>
+<p>获取数组的最大最小值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var numbers = [5, 45822, 120, -215];</div><div class="line">var maxInNumbers = Math.max.apply(Math, numbers);   //45822</div><div class="line">var minInNumbers = Math.min.apply(Math, numbers);   //-215</div></pre></td></tr></table></figure>
+<p>浮点数计算问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0.1 + 0.2 == 0.3   //false</div></pre></td></tr></table></figure>
+<p>为什么呢？因为0.1+0.2等于0.30000000000000004。JavaScript的数字都遵循IEEE 754标准构建，在内部都是64位浮点小数表示。可以通过使用toFixed()来解决这个问题。</p>
+<p>数组排序sort函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">var arr = [1, 5, 6, 3];    //数字数组</div><div class="line">arr.sort(function(a, b) &#123;</div><div class="line">    return a - b;   //从小到大排</div><div class="line">    return b - a;   //从大到小排</div><div class="line">    return Math.random() - 0.5;   //数组洗牌</div><div class="line">    &#125;);</div><div class="line">var arr = [&#123;   //对象数组</div><div class="line">    num: 1,</div><div class="line">    text: &apos;num1&apos;</div><div class="line">    &#125;, &#123;</div><div class="line">    num: 5,</div><div class="line">    text: &apos;num2&apos;</div><div class="line">    &#125;, &#123;</div><div class="line">    num: 6,</div><div class="line">    text: &apos;num3&apos;</div><div class="line">    &#125;, &#123;</div><div class="line">    num: 3,</div><div class="line">    text: &apos;num4&apos;</div><div class="line">    &#125;];   </div><div class="line">arr.sort(function(a, b) &#123;</div><div class="line">    return a.num - b.num;   //从小到大排</div><div class="line">    return b.num - a.num;   //从大到小排</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
+<p>对象和字符串的转换</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;a: &apos;aaa&apos;, b: &apos;bbb&apos;&#125;;</div><div class="line">var objStr = JSON.stringify(obj);    // &quot;&#123;&quot;a&quot;:&quot;aaa&quot;,&quot;b&quot;:&quot;bbb&quot;&#125;&quot;</div><div class="line">var newObj = JSON.parse(objStr);     // &#123;a: &quot;aaa&quot;, b: &quot;bbb&quot;&#125;</div></pre></td></tr></table></figure>
+<h3 id="git笔记"><a href="#git笔记" class="headerlink" title="git笔记"></a>git笔记</h3><p>git使用之前的配置</p>
+<p> <code>git config --global</code> <code>user.email xxx@163.com</code><br> <code>git config --global</code> <code>user.name xxx</code><br> <code>ssh-keygen -t rsa -C</code> <code>xxx@163.com(邮箱地址)</code>      // 生成ssh<br> 找到 <code>.ssh</code> 文件夹打开，使用 <code>cat id_rsa.pub</code>    //打开公钥ssh串<br> 登陆 <code>github，settings － SSH keys  － add ssh keys</code> （把上面的内容全部添加进去即可）<br>说明：然后这个邮箱（xxxxx@gmail.com）对应的账号在github上就有权限对仓库进行操作了。可以尽情的进行下面的git命令了。<br>git常用命令</p>
+<p> <code>git config user.name</code>  /  <code>user.email</code>     //查看当前git的用户名称、邮箱<br> <code>git clone https://github.com/jarson7426/javascript.git  project</code>  //clone仓库到本地。<br> 修改本地代码，提交到分支:  <code>git add file</code>   /   <code>git commit -m</code> “新增文件”<br> 把本地库推送到远程库:  <code>git push origin master</code><br> 查看提交日志：<code>git log -5</code><br> 返回某一个版本：<code>git reset --hard 123</code><br> 分支：<code>git branch</code> / <code>git checkout name</code>  / <code>git checkout -b dev</code><br> 合并name分支到当前分支：<code>git merge name</code>   /   <code>git pull origin</code><br> 删除本地分支：<code>git branch -D name</code><br> 删除远程分支： <code>git push origin  :daily/x.x.x</code><br> <code>git checkout -b mydev origin/daily/1.0.0</code>   //把远程daily分支映射到本地mydev分支进行开发<br> 合并远程分支到当前分支 git pull origin daily/1.1.1<br> 发布到线上：<br>    <code>git tag publish/0.1.5</code><br>    <code>git push origin publish/0.1.5:publish/0.1.5</code><br>    14、线上代码覆盖到本地：<br>    <code>git checkout --theirs build/scripts/ddos</code><br>    <code>git checkout --theirs src/app/ddos</code> </p>
+
+            <blockquote>
+                <p>
+                本文地址：
+                <a href="https://leehave.github.io/2016/11/04/常用js函数/" target="_blank" rel="external">https://leehave.github.io/2016/11/04/常用js函数/</a>
+                </p>
+                <footer><cite><a href="https://leehave.github.io">@Director</a></cite></footer>
+            </blockquote>
+            </div>
+            
+<nav class="post-nav">
+  
+
+  
+    <div class="waves-block waves-effect next fr">
+      <a href="/2016/10/09/几道面试题/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">javascript面试题</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+            
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="常用js函数" data-title="常用js函数" data-url="https://leehave.github.io/2016/11/04/常用js函数/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"disqus_shortname"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+        </div>
+    </div>
+</article>
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<script>
+var BLOG_SHARE = {
+    title: "常用js函数",
+    pic: "/img/logo.jpg",
+    summary: document.getElementsByName('summary')[0].content,
+    url: "https://leehave.github.io/2016/11/04/常用js函数/index.html"
+};
+</script>
+<div class="global-share" id="global-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<script type="text/template" id="search-tpl">
+<li class="item">
+    <a href="/{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</script>
+
+<script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
