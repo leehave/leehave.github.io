@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>模块化开发和面向对象编程 | Director | 只为装逼而写,WEB前端笔记集合</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="theme-color" content="#3F51B5">
+  
+  
+  <meta name="keywords" content="seajs,设计模式,停止维护的一个模块化工具">
+  <meta name="description" content="demo放在coding上 https://coding.net/u/coder-lzx/p/seajsdemo/git
+一开始团队做项目,都会从简单的习惯开始。通常会把一些通用的功能抽取出来。独立成一个一个的函数。比如
+1234567function each(arr) &amp;#123;  // 实现代码&amp;#125;function log(str) &amp;#123;  // 实现代码&amp;#125;
+并像">
+<meta property="og:type" content="article">
+<meta property="og:title" content="模块化开发和面向对象编程">
+<meta property="og:url" content="https://leehave.github.io/2017/01/07/模块化&面向对象编程/index.html">
+<meta property="og:site_name" content="Director">
+<meta property="og:description" content="demo放在coding上 https://coding.net/u/coder-lzx/p/seajsdemo/git
+一开始团队做项目,都会从简单的习惯开始。通常会把一些通用的功能抽取出来。独立成一个一个的函数。比如
+1234567function each(arr) &amp;#123;  // 实现代码&amp;#125;function log(str) &amp;#123;  // 实现代码&amp;#125;
+并像">
+<meta property="og:image" content="http://ojekk8779.bkt.clouddn.com/QQ20170107-4@2x.png">
+<meta property="og:image" content="http://ojekk8779.bkt.clouddn.com/QQ20170107-3@2x.png">
+<meta property="og:image" content="http://ojekk8779.bkt.clouddn.com/QQ20170107-5@2x.png">
+<meta property="og:image" content="http://ojekk8779.bkt.clouddn.com/QQ20170107-6@2x.png">
+<meta property="og:updated_time" content="2017-01-07T09:38:51.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="模块化开发和面向对象编程">
+<meta name="twitter:description" content="demo放在coding上 https://coding.net/u/coder-lzx/p/seajsdemo/git
+一开始团队做项目,都会从简单的习惯开始。通常会把一些通用的功能抽取出来。独立成一个一个的函数。比如
+1234567function each(arr) &amp;#123;  // 实现代码&amp;#125;function log(str) &amp;#123;  // 实现代码&amp;#125;
+并像">
+<meta name="twitter:image" content="http://ojekk8779.bkt.clouddn.com/QQ20170107-4@2x.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Director" type="application/atom+xml">
+  
+  <meta name="summary" content="&lt;p&gt;demo放在coding上 &lt;a href=&quot;https://coding.net/u/coder-lzx/p/seajsdemo/git&quot;&gt;https://coding.net/u/coder-lzx/p/seajsdemo/git&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一开始团队做项目,都会从简单的习惯开始。通常会把一些通用的功能抽取出来。独立成一个一个的函数。比如&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;function each(arr) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  // 实现代码&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;function log(str) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  // 实现代码&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;并像模像样地把这些函数统一放在 util.js 里。需要用到时，引入该文件就行。这一切工作得很好。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;慢慢的项目完成后,后端同志也加了代码,一些原本可以公共代码可以复用的,结果又重新加上去了,重复的造轮子。就像这样&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://ojekk8779.bkt.clouddn.com/QQ20170107-4@2x.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ojekk8779.bkt.clouddn.com/QQ20170107-3@2x.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这就尴尬了,为了避免重复造轮子,面向对象的设计模式解决了这种情况,有个好处就是利于多人协作。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ojekk8779.bkt.clouddn.com/QQ20170107-5@2x.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;调用方法&lt;br&gt;&lt;img src=&quot;http://ojekk8779.bkt.clouddn.com/QQ20170107-6@2x.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner flex-row-vertical">
+  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="/" class="avatar"><img src="/img/logo.jpg"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">Director</h5>
+        <a href="mailto:undefined" title="1831553725@qq.com" class="mail">1831553725@qq.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <ul class="nav flex-col">
+    
+        <li class="waves-block waves-effect">
+          <a href="/"  >
+            <i class="icon icon-lg icon-home"></i>
+            主页
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="/archives"  >
+            <i class="icon icon-lg icon-archives"></i>
+            Archives
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="/tags"  >
+            <i class="icon icon-lg icon-tags"></i>
+            Tags
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="https://github.com/leehave" target="_blank" >
+            <i class="icon icon-lg icon-github"></i>
+            Github
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="http://weibo.com/u/2869337292" target="_blank" >
+            <i class="icon icon-lg icon-weibo"></i>
+            Weibo
+          </a>
+        </li>
+    
+        <li class="waves-block waves-effect">
+          <a href="/404"  >
+            <i class="icon icon-lg icon-link"></i>
+            测试
+          </a>
+        </li>
+    
+  </ul>
+
+  <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>Director &copy; 2017</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">模块化开发和面向对象编程</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">模块化开发和面向对象编程</h1>
+    <h5 class="subtitle">
+        
+            <time datetime="2017-01-07T09:38:51.000Z" itemprop="datePublished" class="page-time">
+  2017-01-07
+</time>
+
+
+        
+    </h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      <article id="post-模块化&amp;面向对象编程" 
+  class="article article-type-post" itemprop="blogPost">
+    <div class="post-meat flex-row">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/seajs/">seajs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/停止维护的一个模块化工具/">停止维护的一个模块化工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+
+    </div>
+    <div class="post-body">
+        <aside class="post-widget" id="post-widget">
+
+            
+            <div class="post-share" id="post-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+            
+
+            
+            <nav class="post-toc-wrap" id="post-toc">
+            
+            </nav>
+            
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" id="post-content" itemprop="postContent">
+            <p>demo放在coding上 <a href="https://coding.net/u/coder-lzx/p/seajsdemo/git" target="_blank" rel="external">https://coding.net/u/coder-lzx/p/seajsdemo/git</a></p>
+<p>一开始团队做项目,都会从简单的习惯开始。通常会把一些通用的功能抽取出来。独立成一个一个的函数。比如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function each(arr) &#123;</div><div class="line">  // 实现代码</div><div class="line">&#125;</div><div class="line"></div><div class="line">function log(str) &#123;</div><div class="line">  // 实现代码</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>并像模像样地把这些函数统一放在 util.js 里。需要用到时，引入该文件就行。这一切工作得很好。</p>
+<blockquote>
+<p>慢慢的项目完成后,后端同志也加了代码,一些原本可以公共代码可以复用的,结果又重新加上去了,重复的造轮子。就像这样</p>
+</blockquote>
+<p><img src="http://ojekk8779.bkt.clouddn.com/QQ20170107-4@2x.png" alt=""><br><img src="http://ojekk8779.bkt.clouddn.com/QQ20170107-3@2x.png" alt=""></p>
+<p>这就尴尬了,为了避免重复造轮子,面向对象的设计模式解决了这种情况,有个好处就是利于多人协作。</p>
+<p><img src="http://ojekk8779.bkt.clouddn.com/QQ20170107-5@2x.png" alt=""></p>
+<p>调用方法<br><img src="http://ojekk8779.bkt.clouddn.com/QQ20170107-6@2x.png" alt=""></p>
+<a id="more"></a>
+<p>seajs作为一个已停止更新维护的项目,我暂时就不去过多学习,前端的水深,需要无时无刻的学习和关注动态。致此,一年过去了,继续努力</p>
+
+            <blockquote>
+                <p>
+                本文地址：
+                <a href="https://leehave.github.io/2017/01/07/模块化&面向对象编程/" target="_blank" rel="external">https://leehave.github.io/2017/01/07/模块化&面向对象编程/</a>
+                </p>
+                <footer><cite><a href="https://leehave.github.io">@Director</a></cite></footer>
+            </blockquote>
+            </div>
+            
+<nav class="post-nav">
+  
+
+  
+    <div class="waves-block waves-effect next fr">
+      <a href="/2016/11/04/常用js函数/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">常用js函数</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+            
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="模块化&amp;面向对象编程" data-title="模块化开发和面向对象编程" data-url="https://leehave.github.io/2017/01/07/模块化&amp;面向对象编程/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"disqus_shortname"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+        </div>
+    </div>
+</article>
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<script>
+var BLOG_SHARE = {
+    title: "模块化开发和面向对象编程",
+    pic: "/img/logo.jpg",
+    summary: document.getElementsByName('summary')[0].content,
+    url: "https://leehave.github.io/2017/01/07/模块化&amp;面向对象编程/index.html"
+};
+</script>
+<div class="global-share" id="global-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<script type="text/template" id="search-tpl">
+<li class="item">
+    <a href="/{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</script>
+
+<script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://leehave.github.io/"/>
-  <updated>2016-11-04T05:15:19.000Z</updated>
+  <updated>2017-01-07T09:38:51.000Z</updated>
   <id>https://leehave.github.io/</id>
   
   <author>
@@ -14,6 +14,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>模块化开发和面向对象编程</title>
+    <link href="https://leehave.github.io/2017/01/07/%E6%A8%A1%E5%9D%97%E5%8C%96&amp;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
+    <id>https://leehave.github.io/2017/01/07/模块化&amp;面向对象编程/</id>
+    <published>2017-01-07T09:38:51.000Z</published>
+    <updated>2017-01-07T09:38:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>demo放在coding上 <a href="https://coding.net/u/coder-lzx/p/seajsdemo/git" target="_blank" rel="external">https://coding.net/u/coder-lzx/p/seajsdemo/git</a></p>
+<p>一开始团队做项目,都会从简单的习惯开始。通常会把一些通用的功能抽取出来。独立成一个一个的函数。比如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function each(arr) &#123;</div><div class="line">  // 实现代码</div><div class="line">&#125;</div><div class="line"></div><div class="line">function log(str) &#123;</div><div class="line">  // 实现代码</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>并像模像样地把这些函数统一放在 util.js 里。需要用到时，引入该文件就行。这一切工作得很好。</p>
+<blockquote>
+<p>慢慢的项目完成后,后端同志也加了代码,一些原本可以公共代码可以复用的,结果又重新加上去了,重复的造轮子。就像这样</p>
+</blockquote>
+<p><img src="http://ojekk8779.bkt.clouddn.com/QQ20170107-4@2x.png" alt=""><br><img src="http://ojekk8779.bkt.clouddn.com/QQ20170107-3@2x.png" alt=""></p>
+<p>这就尴尬了,为了避免重复造轮子,面向对象的设计模式解决了这种情况,有个好处就是利于多人协作。</p>
+<p><img src="http://ojekk8779.bkt.clouddn.com/QQ20170107-5@2x.png" alt=""></p>
+<p>调用方法<br><img src="http://ojekk8779.bkt.clouddn.com/QQ20170107-6@2x.png" alt=""></p>
+<a id="more"></a>
+<p>seajs作为一个已停止更新维护的项目,我暂时就不去过多学习,前端的水深,需要无时无刻的学习和关注动态。致此,一年过去了,继续努力</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;demo放在coding上 &lt;a href=&quot;https://coding.net/u/coder-lzx/p/seajsdemo/git&quot;&gt;https://coding.net/u/coder-lzx/p/seajsdemo/git&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一开始团队做项目,都会从简单的习惯开始。通常会把一些通用的功能抽取出来。独立成一个一个的函数。比如&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;function each(arr) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  // 实现代码&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;function log(str) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  // 实现代码&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;并像模像样地把这些函数统一放在 util.js 里。需要用到时，引入该文件就行。这一切工作得很好。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;慢慢的项目完成后,后端同志也加了代码,一些原本可以公共代码可以复用的,结果又重新加上去了,重复的造轮子。就像这样&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://ojekk8779.bkt.clouddn.com/QQ20170107-4@2x.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ojekk8779.bkt.clouddn.com/QQ20170107-3@2x.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这就尴尬了,为了避免重复造轮子,面向对象的设计模式解决了这种情况,有个好处就是利于多人协作。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ojekk8779.bkt.clouddn.com/QQ20170107-5@2x.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;调用方法&lt;br&gt;&lt;img src=&quot;http://ojekk8779.bkt.clouddn.com/QQ20170107-6@2x.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="seajs" scheme="https://leehave.github.io/tags/seajs/"/>
+    
+      <category term="设计模式" scheme="https://leehave.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="停止维护的一个模块化工具" scheme="https://leehave.github.io/tags/%E5%81%9C%E6%AD%A2%E7%BB%B4%E6%8A%A4%E7%9A%84%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97%E5%8C%96%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>常用js函数</title>
