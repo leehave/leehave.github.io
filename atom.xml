@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://leehave.github.io/"/>
-  <updated>2017-01-07T09:38:51.000Z</updated>
+  <updated>2017-04-01T10:05:31.000Z</updated>
   <id>https://leehave.github.io/</id>
   
   <author>
@@ -14,6 +14,66 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>除去复制粘贴,你对JavaScript有多了解,JavaScript入门级笔试题</title>
+    <link href="https://leehave.github.io/2017/04/01/JavaScript%E5%85%A5%E9%97%A8%E7%BA%A7%E7%AC%94%E8%AF%95%E9%A2%98/"/>
+    <id>https://leehave.github.io/2017/04/01/JavaScript入门级笔试题/</id>
+    <published>2017-04-01T10:05:31.000Z</published>
+    <updated>2017-04-01T10:05:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-下面表达式的运算结果是什么？"><a href="#1-下面表达式的运算结果是什么？" class="headerlink" title="1.下面表达式的运算结果是什么？"></a>1.下面表达式的运算结果是什么？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">console.log(1 + - + + + - + 1);</div></pre></td></tr></table></figure>
+<h2 id="2-下面表达式的运算结果是什么？"><a href="#2-下面表达式的运算结果是什么？" class="headerlink" title="2.下面表达式的运算结果是什么？"></a>2.下面表达式的运算结果是什么？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var a = 10, b = 20, c = (a++,b++,100);</div><div class="line">   console.log(c);</div></pre></td></tr></table></figure>
+<h2 id="3-实现一个函数，返回输入参数是否为质数"><a href="#3-实现一个函数，返回输入参数是否为质数" class="headerlink" title="3.实现一个函数，返回输入参数是否为质数"></a>3.实现一个函数，返回输入参数是否为质数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function isZhiShu(m)&#123;</div><div class="line">       /*返回布尔值*/</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<h2 id="4-将改字符串按照字母出现的次数由大到小重新排列-如果不是字符串类型，不做任何修改，返回FALSE"><a href="#4-将改字符串按照字母出现的次数由大到小重新排列-如果不是字符串类型，不做任何修改，返回FALSE" class="headerlink" title="4.将改字符串按照字母出现的次数由大到小重新排列,如果不是字符串类型，不做任何修改，返回FALSE"></a>4.将改字符串按照字母出现的次数由大到小重新排列,如果不是字符串类型，不做任何修改，返回FALSE</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">   * 如果传入的参数是字符串，则将改字符串按照字母出现的次数由大到小重新排列</div><div class="line">   * exp：‘ddxsss’=&gt;&apos;sssddx&apos;</div><div class="line">   * 如果不是字符串类型，不做任何修改，返回FALSE</div><div class="line">   * @return &#123;Boolean&#125; 是否转换成功</div><div class="line">   */</div><div class="line">   function sortStringByCount()&#123;&#125;</div></pre></td></tr></table></figure>
+<h2 id="5-获取斐波那契数列的第n个值"><a href="#5-获取斐波那契数列的第n个值" class="headerlink" title="5.获取斐波那契数列的第n个值"></a>5.获取斐波那契数列的第n个值</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">   * 获取斐波那契数列的第n个值</div><div class="line">   * 如果n不是有效的数字则返回undefined</div><div class="line">   * @return &#123;Number|undefined&#125;</div><div class="line">   */</div><div class="line">   function getFBN(n)&#123;&#125;</div></pre></td></tr></table></figure>
+<h2 id="6-计算从10到100中能被3或5整除的数的和"><a href="#6-计算从10到100中能被3或5整除的数的和" class="headerlink" title="6.计算从10到100中能被3或5整除的数的和"></a>6.计算从10到100中能被3或5整除的数的和</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">   * 计算从10到100中能被3或5整除的数的和</div><div class="line">   * @return &#123;number&#125; [description] */</div><div class="line">   function getSum()</div></pre></td></tr></table></figure>
+<h2 id="7-将传入的字符串翻转输出，如果不是字符串输出undefined"><a href="#7-将传入的字符串翻转输出，如果不是字符串输出undefined" class="headerlink" title="7.将传入的字符串翻转输出，如果不是字符串输出undefined"></a>7.将传入的字符串翻转输出，如果不是字符串输出undefined</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">   * 将传入的字符串翻转输出，如果不是字符串输出undefined</div><div class="line">   * @return &#123;String |undefined&#125; [description] */</div></pre></td></tr></table></figure>
+<h2 id="8-实现一个函数，来判断输入字符串是否为“回文”"><a href="#8-实现一个函数，来判断输入字符串是否为“回文”" class="headerlink" title="8.实现一个函数，来判断输入字符串是否为“回文”"></a>8.实现一个函数，来判断输入字符串是否为“回文”</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">实现一个函数，来判断输入字符串是否为“回文”（忽略大小写），如：Helleh，王中王</div></pre></td></tr></table></figure>
+<h2 id="9-去除字符串中重复的字符"><a href="#9-去除字符串中重复的字符" class="headerlink" title="9.去除字符串中重复的字符"></a>9.去除字符串中重复的字符</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">去除字符串中重复的字符</div></pre></td></tr></table></figure>
+<h2 id="10-输出1000内水仙花数"><a href="#10-输出1000内水仙花数" class="headerlink" title="10.输出1000内水仙花数"></a>10.输出1000内水仙花数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">   * 输出1000内水仙花数</div><div class="line">   * 水仙花数是指一个 n 位数 ( n≥3 )，它的每个位上的数字的 n 次幂之和等于它本身。（例如：1^3 + 5^3+ 3^3 = 153）</div><div class="line">   * 三位的水仙花数共有4个：153，370，371，407</div><div class="line">   * @return &#123;undefined&#125; [description] */</div><div class="line">   function shuixianhua()&#123;&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-下面表达式的运算结果是什么？&quot;&gt;&lt;a href=&quot;#1-下面表达式的运算结果是什么？&quot; class=&quot;headerlink&quot; title=&quot;1.下面表达式的运算结果是什么？&quot;&gt;&lt;/a&gt;1.下面表达式的运算结果是什么？&lt;/h2&gt;&lt;figure class=&quot;hi
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>TCP/IP的一点笔记</title>
+    <link href="https://leehave.github.io/2017/01/19/TCP%7CIP%E7%AC%94%E8%AE%B0/"/>
+    <id>https://leehave.github.io/2017/01/19/TCP|IP笔记/</id>
+    <published>2017-01-19T02:52:35.000Z</published>
+    <updated>2017-01-19T02:52:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="建立连接"><a href="#建立连接" class="headerlink" title="建立连接"></a>建立连接</h2><blockquote>
+<p>TCP协议提供可靠的面向连接服务，采用三次握手建立连接。<br>  第一次握手：建立连接时，客户端发送SYN包(syn=j)到服务器，并进入SYN_SEND状态，等待服务器确认；<br>  第二次握手：服务器收到SYN包，向客户端返回ACK（ack=j+1），同时自己也发送一个SYN包（syn=k），即SYN+ACK包，此时服务器进入SYN_RCVD状态；<br>  第三次握手：客户端收到服务器的SYN＋ACK包，向服务器发送确认包ACK(ack=k+1)，此包发送完毕，客户端和服务器进入ESTABLISHED状态，完成三次握手。<br>  完成三次握手，客户端与服务器开始传送数据，也就是ESTABLISHED状态。 </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">什么是SYN包？SYN包是什么意思？</div><div class="line"></div><div class="line">TCP连接的第一个包，非常小的一种数据包。SYN攻击包括大量此类的包，由于这些包看上去来自实际不存在的站点，因此无法有效进行处理。</div><div class="line">当两台计算机在TCP连接上进行会话时，连接一定会首先被初始化。完成这项任务的包叫作SYN。一个SYN包简单的表明另一台计算机已经做好了会话的准备。只有发出服务请求的计算机才发送SYN包。所以如果你仅拒绝进来的SYN包，它将终止其它计算机打开你计算机上的服务，但是不会终止你使用其它计算机上的服务，如果它没有拒绝你发送的SYN包的话。</div><div class="line"></div><div class="line">SYN攻击</div><div class="line">最近对SYN Flood特别感兴趣，看到一个关于SYN cookie firewall的文章，在google搜了一下，没中文的，翻译他一下  </div><div class="line">本文介绍了４个概念  </div><div class="line"></div><div class="line">一：介绍SYN  </div><div class="line">二：什么是SYN洪水攻击  </div><div class="line">三：什么是SYN cookie  </div><div class="line">四：什么是SYN cookie防火墙  </div><div class="line"></div><div class="line">C=client(客户器)  </div><div class="line">S=Server(服务器)  </div><div class="line">FW=Firewall(防火墙)  </div><div class="line"></div><div class="line">一：介绍SYN  </div><div class="line">SYN cookie是一个防止SYN洪水攻击技术。他由D. J. Bernstein和Eric Schenk发明。现在SYN  </div><div class="line">COOKIE已经是linux内核的一部分了（我插一句 ，默认的stat是no）,但是在linux系统的执行过程中它只保护linux系统。我们这里只是说创建一个linux防火墙，他可以为整个网络和所有的网  </div><div class="line"></div><div class="line">络操作系统提供SYN COOKIE保护你可以用这个防火墙来阻断半开放式tcp连接，所以这个受保护的系统不会进入半开放状态(TCP_SYN_RECV)。当 连接完全建立的时候，客户机到服务器的连接要通过防火墙来中转完成。  </div><div class="line"></div><div class="line">二：什么是SYN洪水攻击？（来自CERT的警告）  </div><div class="line">当一个系统（我们叫他客户端）尝试和一个提供了服务的系统（服务器）建立TCP连接，C和服务端会交换一系列报文。  </div><div class="line">这种连接技术广泛的应用在各种TCP连接中，例如telnet,Web,email,等等。  </div><div class="line">首先是C发送一个SYN报文给服务端，然后这个服务端发送一个SYN-ACK包以回应C，接着，C就返回一个ACK包来实现一次完  </div><div class="line"></div><div class="line">整的TCP连接。就这样，C到服务端的连接就建立了，这时C和服务端就可以互相交换数据了。下面是上文的图片说明：）  </div><div class="line">Client Server  </div><div class="line">------ ------  </div><div class="line">SYN--------------------&gt;  </div><div class="line"></div><div class="line">&lt;--------------------SYN-ACK  </div><div class="line"></div><div class="line">ACK--------------------&gt;  </div><div class="line"></div><div class="line">Client and server can now  </div><div class="line">send service-specific data  </div><div class="line"></div><div class="line">在S返回一个确认的SYN-ACK包的时候有个潜在的弊端，他可能不会接到C回应的ACK包。这个也就是所谓的半开放连接，S需要  </div><div class="line"></div><div class="line">耗费一定的数量的系统内存来等待这个未决的连接，虽然这个数量是受限的，但是恶意者可以通过创建很多的半开放式连接来发动SYN洪水攻击 。</div><div class="line">通过ip欺骗可以很容易的实现半开放连接。攻击者发送SYN包给受害者系统，这个看起来是合法的，但事实上所谓的C根本不会回应这个 。</div><div class="line">SYN-ACK报文，这意味着受害者将永远不会接到ACK报文。  </div><div class="line">而此时，半开放连接将最终耗用受害者所有的系统资源，受害者将不能再接收任何其他的请求。通常等待ACK返回包有超时限制，所以半开放 。</div><div class="line"></div><div class="line">连接将最终超时，而受害者系统也会自动修复。虽然这样，但是在受害者系统修复之前，攻击者可以很容易的一直发送虚假的SYN请求包来持续 攻击。 在大多数情况下，受害者几乎不能接受任何其他的请求，但是这种攻击不会影响到已经存在的进站或者是出站连接。虽然这样，受害者系统 还是可能耗尽系统资源，以导致其他种种问题。  </div><div class="line">攻击系统的位置几乎是不可确认的，因为SYN包中的源地址多数都是虚假的。当SYN包到达受害者系统的时候，没有办法找到他的真实地址 ，因为在基于源地址的数据包传输中，源ip过滤是唯一可以验证数据包源的方法。  </div><div class="line"></div><div class="line">三：什么是SYN cookie？  </div><div class="line">SYN cookie就是用一个cookie来响应TCP SYN请求的TCP实现，根据上面的描述，在正常的TCP实现中，当S接收到一个SYN数据包，他返回 一个SYN-ACK包来应答，然后进入TCP-SYN-RECV（半开放连接）状态来等待最后返回的ACK包。S用一个数据空间来描述所有未决的连接， 然而这个数据空间的大小是有限的，所以攻击者将塞满这个空间。 在TCP SYN COOKIE的执行过程中，当S接收到一个SYN包的时候，他返回一个SYN-ACK包，这个数据包的ACK序列号是经过加密的，也就 是说，它由源地址，端口源次序，目标地址，目标端口和一个加密种子计算得出。然后S释放所有的状态。如果一个ACK包从C返回， S将重新计算它来判断它是不是上个SY</div></pre></td></tr></table></figure>
+<h2 id="终止连接"><a href="#终止连接" class="headerlink" title="终止连接"></a>终止连接</h2><blockquote>
+<p>采用四次挥手断开双向连接。<br>（1） TCP客户端发送一个FIN，用来关闭客户到服务器的数据传送。<br>（2） 服务器收到这个FIN，它发回一个ACK，确认序号为收到的序号加1。和SYN一样，一个FIN将占用一个序号。<br>（3） 服务器关闭客户端的连接，发送一个FIN给客户端。<br>（4） 客户端发回ACK报文确认，并将确认序号设置为收到序号加1。</p>
+</blockquote>
+<p><img src="http://ojekk8779.bkt.clouddn.com/tcp.jpg" alt=""></p>
+<p>客户端的状态可以用一下流程图来表示：</p>
+<p>CLOSED-&gt;SYN_SENT-&gt;ESTABLISHED-&gt;FIN_WAIT_1-&gt;FIN_WAIT_2-&gt;TIME_WAIT-&gt;CLOSED</p>
+<p>服务器的状态可以流程图：</p>
+<p>CLOSED-&gt;LISTEN-&gt;SYN收到 -&gt;ESTABLISHED-&gt;CLOSE_WAIT-&gt;LAST-&gt;ACK-&gt;CLOSED</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;建立连接&quot;&gt;&lt;a href=&quot;#建立连接&quot; class=&quot;headerlink&quot; title=&quot;建立连接&quot;&gt;&lt;/a&gt;建立连接&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;TCP协议提供可靠的面向连接服务，采用三次握手建立连接。&lt;br&gt;  第一次握手：建立连接时，客户端
+    
+    </summary>
+    
+    
+      <category term="TCP/IP" scheme="https://leehave.github.io/tags/TCP-IP/"/>
+    
+  </entry>
   
   <entry>
     <title>模块化开发和面向对象编程</title>
